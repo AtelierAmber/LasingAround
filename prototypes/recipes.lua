@@ -58,7 +58,7 @@ data:extend({
     type = "recipe",
     name = "advanced-oil-filtration",
     localised_description = {"recipe-description.helium-productivity-rules"},
-    icon = "__LasingAround__/graphics/icons/advanced-oil-filtration.png",
+    icon = "__LasingAround-Updated__/graphics/icons/advanced-oil-filtration.png",
     icon_size = 64,
     subgroup = "helium",
     order = "b",
@@ -80,11 +80,11 @@ data:extend({
     localised_description = {"recipe-description.helium-productivity-rules"},
     icons = {
       {
-        icon = "__LasingAround__/graphics/icons/advanced-oil-filtration.png",
+        icon = "__LasingAround-Updated__/graphics/icons/advanced-oil-filtration.png",
         icon_size = 64,
       },
       {
-        icon = "__LasingAround__/graphics/icons/spectroscope.png",
+        icon = "__LasingAround-Updated__/graphics/icons/spectroscope.png",
         icon_size = 64,
         scale=0.25,
         shift={-8, 8}
@@ -191,7 +191,7 @@ if mods["bzgas"] then
       type = "recipe",
       name = "advanced-gas-processing",
       localised_description = {"recipe-description.helium-productivity-rules"},
-      icon = "__LasingAround__/graphics/icons/advanced-gas-processing.png",
+      icon = "__LasingAround-Updated__/graphics/icons/advanced-gas-processing.png",
       icon_size = 64,
       subgroup = "helium",
       order = "d",
@@ -213,11 +213,11 @@ if mods["bzgas"] then
       localised_description = {"recipe-description.helium-productivity-rules"},
       icons = {
         {
-          icon = "__LasingAround__/graphics/icons/advanced-gas-processing.png",
+          icon = "__LasingAround-Updated__/graphics/icons/advanced-gas-processing.png",
           icon_size = 64,
         },
         {
-          icon = "__LasingAround__/graphics/icons/spectroscope.png",
+          icon = "__LasingAround-Updated__/graphics/icons/spectroscope.png",
           icon_size = 64,
           scale=0.25,
           shift={-8, 8}
@@ -253,7 +253,7 @@ if mods["bzgas"] then
               shift={-8, -8}
             },
             {
-              icon = "__LasingAround__/graphics/icons/helium.png",
+              icon = "__LasingAround-Updated__/graphics/icons/helium.png",
               icon_size = 64,
               scale=0.25,
               shift={8, 8}
@@ -290,13 +290,13 @@ if mods["bzgas"] then
               shift={-8, -8}
             },
             {
-              icon = "__LasingAround__/graphics/icons/helium.png",
+              icon = "__LasingAround-Updated__/graphics/icons/helium.png",
               icon_size = 64,
               scale=0.25,
               shift={8, 8}
             },
             {
-              icon = "__LasingAround__/graphics/icons/spectroscope.png",
+              icon = "__LasingAround-Updated__/graphics/icons/spectroscope.png",
               icon_size = 64,
               scale=0.25,
               shift={-8, 8}
@@ -333,7 +333,7 @@ if mods["bzgas"] then
               shift={-8, -8}
             },
             {
-              icon = "__LasingAround__/graphics/icons/helium.png",
+              icon = "__LasingAround-Updated__/graphics/icons/helium.png",
               icon_size = 64,
               scale=0.25,
               shift={8, 8}
@@ -370,13 +370,13 @@ if mods["bzgas"] then
               shift={-8, -8}
             },
             {
-              icon = "__LasingAround__/graphics/icons/helium.png",
+              icon = "__LasingAround-Updated__/graphics/icons/helium.png",
               icon_size = 64,
               scale=0.25,
               shift={8, 8}
             },
             {
-              icon = "__LasingAround__/graphics/icons/spectroscope.png",
+              icon = "__LasingAround-Updated__/graphics/icons/spectroscope.png",
               icon_size = 64,
               scale=0.25,
               shift={-8, 8}
@@ -438,11 +438,11 @@ if data.raw.item["micron-tolerance-components"] then
         name = "spectroscope-micron-tolerance",
         icons = {
           {
-            icon = "__LasingAround__/graphics/icons/spectroscope.png",
+            icon = "__LasingAround-Updated__/graphics/icons/spectroscope.png",
             icon_size = 64
           },
           {
-            icon = "__LasingAround__/graphics/icons/micron-tolerance-components.png",
+            icon = "__LasingAround-Updated__/graphics/icons/micron-tolerance-components.png",
             icon_size = 64,
             scale = 0.25,
             shift = {-8, -8}
@@ -475,11 +475,11 @@ if data.raw.item["micron-tolerance-components"] then
           name = "spectroscope-micron-tolerance",
           icons = {
             {
-              icon = "__LasingAround__/graphics/icons/spectroscope.png",
+              icon = "__LasingAround-Updated__/graphics/icons/spectroscope.png",
               icon_size = 64
             },
             {
-              icon = "__LasingAround__/graphics/icons/micron-tolerance-components.png",
+              icon = "__LasingAround-Updated__/graphics/icons/micron-tolerance-components.png",
               icon_size = 64,
               scale = 0.25,
               shift = {-8, -8}
@@ -511,7 +511,7 @@ if not mods["Krastorio2"] then
     {
       type = "recipe",
       name = "helium-venting",
-      icon = "__LasingAround__/graphics/icons/helium-venting.png",
+      icon = "__LasingAround-Updated__/graphics/icons/helium-venting.png",
       icon_size = 64,
       subgroup = "helium",
       order = "z",
@@ -541,7 +541,7 @@ if mods["LunarLandings"] then
       localised_name = { "recipe-name.polariton-laser" },
       icons = {
         {
-          icon = "__LasingAround__/graphics/icons/helium-laser.png",
+          icon = "__LasingAround-Updated__/graphics/icons/helium-laser.png",
           icon_size = 64
         },
         {
@@ -574,7 +574,7 @@ if mods["LunarLandings"] then
             icon_size = 64
           },
           {
-            icon = "__LasingAround__/graphics/icons/tracker.png",
+            icon = "__LasingAround-Updated__/graphics/icons/tracker.png",
             icon_size = 64,
             scale = 0.25,
             shift = {-8, -8}

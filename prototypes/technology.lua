@@ -9,7 +9,7 @@ data:extend({
     name = "helium-extraction",
     icons = {
       {
-        icon = "__LasingAround__/graphics/technology/helium-extraction.png",
+        icon = "__LasingAround-Updated__/graphics/technology/helium-extraction.png",
         icon_size = 256
       }
      },
@@ -40,7 +40,7 @@ data:extend({
     name = "helium-laser",
     icons = {
       {
-        icon = "__LasingAround__/graphics/technology/helium-laser.png",
+        icon = "__LasingAround-Updated__/graphics/technology/helium-laser.png",
         icon_size = 256
       }
      },
@@ -67,7 +67,7 @@ data:extend({
     name = "carbon-dioxide-laser",
     icons = {
       {
-        icon = "__LasingAround__/graphics/technology/carbon-dioxide-laser.png",
+        icon = "__LasingAround-Updated__/graphics/technology/carbon-dioxide-laser.png",
         icon_size = 256
       }
      },
@@ -94,7 +94,7 @@ data:extend({
     name = "scanner",
     icons = {
       {
-        icon = "__LasingAround__/graphics/technology/scanner.png",
+        icon = "__LasingAround-Updated__/graphics/technology/scanner.png",
         icon_size = 256
       }
      },
@@ -125,7 +125,7 @@ data:extend({
     name = "spectroscopy",
     icons = {
       {
-        icon = "__LasingAround__/graphics/technology/spectroscopy.png",
+        icon = "__LasingAround-Updated__/graphics/technology/spectroscopy.png",
         icon_size = 256
       }
      },
@@ -152,7 +152,7 @@ data:extend({
     name = "laser-mill",
     icons = {
       {
-        icon = "__LasingAround__/graphics/technology/laser-mill.png",
+        icon = "__LasingAround-Updated__/graphics/technology/laser-mill.png",
         icon_size = 256
       }
      },
@@ -179,11 +179,11 @@ data:extend({
     name = "spectroscopic-helium-extraction",
     icons = {
       {
-        icon = "__LasingAround__/graphics/technology/helium-extraction.png",
+        icon = "__LasingAround-Updated__/graphics/technology/helium-extraction.png",
         icon_size = 256
       },
       {
-        icon = "__LasingAround__/graphics/technology/spectroscopy.png",
+        icon = "__LasingAround-Updated__/graphics/technology/spectroscopy.png",
         icon_size = 256,
         scale = 0.25,
         shift = {-64, 64}
@@ -222,7 +222,7 @@ if data.raw.item["tracker"] then
       name = "tracking-systems",
       icons = {
         {
-          icon = "__LasingAround__/graphics/technology/tracking-systems.png",
+          icon = "__LasingAround-Updated__/graphics/technology/tracking-systems.png",
           icon_size = 256
         }
        },
@@ -258,7 +258,7 @@ if data.raw.item["tracker"] then
                 icon_size = 256
               },
               {
-                icon = "__LasingAround__/graphics/icons/tracker.png",
+                icon = "__LasingAround-Updated__/graphics/icons/tracker.png",
                 icon_size = 64,
                 shift = {-64, -64},
                 scale = 2
@@ -297,7 +297,7 @@ if data.raw.item["micron-tolerance-components"] then
       name = "micron-tolerance-manufacturing",
       icons = {
         {
-          icon = "__LasingAround__/graphics/technology/micron-tolerance-manufacturing.png",
+          icon = "__LasingAround-Updated__/graphics/technology/micron-tolerance-manufacturing.png",
           icon_size = 256
         }
        },
@@ -331,7 +331,7 @@ if data.raw.item["micron-tolerance-components"] then
         name = "micron-tolerance-instruments",
         icons = {
           {
-            icon = "__LasingAround__/graphics/technology/micron-tolerance-instruments.png",
+            icon = "__LasingAround-Updated__/graphics/technology/micron-tolerance-instruments.png",
             icon_size = 256
           }
          },
@@ -368,7 +368,7 @@ if data.raw.item["micron-tolerance-components"] then
           name = "micron-tolerance-instruments",
           icons = {
             {
-              icon = "__LasingAround__/graphics/technology/micron-tolerance-instruments.png",
+              icon = "__LasingAround-Updated__/graphics/technology/micron-tolerance-instruments.png",
               icon_size = 256
             }
            },
@@ -409,7 +409,7 @@ if data.raw.item["micron-tolerance-components"] then
               icon_mipmaps = 4
             },
             {
-              icon = "__LasingAround__/graphics/icons/micron-tolerance-components.png",
+              icon = "__LasingAround-Updated__/graphics/icons/micron-tolerance-components.png",
               icon_size = 64,
               scale = 0.5,
               shift = {-16, -16}
@@ -442,7 +442,7 @@ if mods["LunarLandings"] then
           name = "polariton-laser",
           icons = {
             {
-              icon = "__LasingAround__/graphics/technology/helium-laser.png",
+              icon = "__LasingAround-Updated__/graphics/technology/helium-laser.png",
               icon_size = 256
             },
             {

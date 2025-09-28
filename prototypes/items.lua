@@ -21,7 +21,7 @@ data:extend({
   {
     type = "fluid",
     name = "helium",
-    icon = "__LasingAround__/graphics/icons/helium.png",
+    icon = "__LasingAround-Updated__/graphics/icons/helium.png",
     icon_size = 64,
     subgroup = "fluid",
     order = "a[fluid]-f",
@@ -45,7 +45,7 @@ data:extend({
   {
     type = "item",
     name = "empty-amplifier-tube",
-    icon = "__LasingAround__/graphics/icons/empty-amplifier-tube.png",
+    icon = "__LasingAround-Updated__/graphics/icons/empty-amplifier-tube.png",
     icon_size = 64,
     subgroup = "effector-components",
     order = "a",
@@ -54,17 +54,17 @@ data:extend({
   {
     type = "item",
     name = "helium-laser",
-    icon = "__LasingAround__/graphics/icons/helium-laser.png",
+    icon = "__LasingAround-Updated__/graphics/icons/helium-laser.png",
     icon_size = 64,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = "__LasingAround__/graphics/icons/helium-laser.png",
+          filename = "__LasingAround-Updated__/graphics/icons/helium-laser.png",
           scale = 0.25
         },
         {
-          filename = "__LasingAround__/graphics/icons/helium-laser-glow.png",
+          filename = "__LasingAround-Updated__/graphics/icons/helium-laser-glow.png",
           size = 64,
           scale = 0.25,
           draw_as_light = true
@@ -78,17 +78,17 @@ data:extend({
   {
     type = "item",
     name = "carbon-dioxide-laser",
-    icon = "__LasingAround__/graphics/icons/carbon-dioxide-laser.png",
+    icon = "__LasingAround-Updated__/graphics/icons/carbon-dioxide-laser.png",
     icon_size = 64,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = "__LasingAround__/graphics/icons/carbon-dioxide-laser.png",
+          filename = "__LasingAround-Updated__/graphics/icons/carbon-dioxide-laser.png",
           scale = 0.25
         },
         {
-          filename = "__LasingAround__/graphics/icons/carbon-dioxide-laser-glow.png",
+          filename = "__LasingAround-Updated__/graphics/icons/carbon-dioxide-laser-glow.png",
           size = 128,
           scale = 0.25,
           draw_as_light = true
@@ -102,7 +102,7 @@ data:extend({
   {
     type = "item",
     name = "scanner",
-    icon = "__LasingAround__/graphics/icons/scanner.png",
+    icon = "__LasingAround-Updated__/graphics/icons/scanner.png",
     icon_size = 64,
     subgroup = "effector-components",
     order = "d",
@@ -111,7 +111,7 @@ data:extend({
   {
     type = "item",
     name = "spectroscope",
-    icon = "__LasingAround__/graphics/icons/spectroscope.png",
+    icon = "__LasingAround-Updated__/graphics/icons/spectroscope.png",
     icon_size = 64,
     subgroup = "effector-components",
     order = "e",
@@ -124,14 +124,14 @@ if mods["IfNickel-Updated"] and (mods["space-exploration"] or parts.nickelExperi
     {
       type = "item",
       name = "micron-tolerance-components",
-      icon = "__LasingAround__/graphics/icons/micron-tolerance-components.png",
+      icon = "__LasingAround-Updated__/graphics/icons/micron-tolerance-components.png",
       icon_size = 64,
       pictures =
       {
-        { size = 64, filename = "__LasingAround__/graphics/icons/micron-tolerance-components-1.png", scale = 0.25},
-        { size = 64, filename = "__LasingAround__/graphics/icons/micron-tolerance-components-2.png", scale = 0.25},
-        { size = 64, filename = "__LasingAround__/graphics/icons/micron-tolerance-components-3.png", scale = 0.25},
-        { size = 64, filename = "__LasingAround__/graphics/icons/micron-tolerance-components-4.png", scale = 0.25}
+        { size = 64, filename = "__LasingAround-Updated__/graphics/icons/micron-tolerance-components-1.png", scale = 0.25},
+        { size = 64, filename = "__LasingAround-Updated__/graphics/icons/micron-tolerance-components-2.png", scale = 0.25},
+        { size = 64, filename = "__LasingAround-Updated__/graphics/icons/micron-tolerance-components-3.png", scale = 0.25},
+        { size = 64, filename = "__LasingAround-Updated__/graphics/icons/micron-tolerance-components-4.png", scale = 0.25}
       },
       subgroup = "intermediate-product",
       order = "zote the mighty",
@@ -143,7 +143,7 @@ if mods["IfNickel-Updated"] and (mods["space-exploration"] or parts.nickelExperi
       {
         type = "item",
         name = "laboratory-gear",
-        icon = "__LasingAround__/graphics/icons/laboratory-gear.png",
+        icon = "__LasingAround-Updated__/graphics/icons/laboratory-gear.png",
         icon_size = 64,
         subgroup = "advanced-assembling",
         order = "y",
@@ -158,17 +158,17 @@ if mods["ThemTharHills"] and (data.raw.item["gyroscope"] or data.raw.item["gyro"
     {
      type = "item",
      name = "tracker",
-     icon = "__LasingAround__/graphics/icons/tracker.png",
+     icon = "__LasingAround-Updated__/graphics/icons/tracker.png",
      icon_size = 64,
      pictures = {
        layers = {
          {
            size = 64,
-           filename = "__LasingAround__/graphics/icons/tracker.png",
+           filename = "__LasingAround-Updated__/graphics/icons/tracker.png",
            scale = 0.25
          },
          {
-           filename = "__LasingAround__/graphics/icons/tracker-glow.png",
+           filename = "__LasingAround-Updated__/graphics/icons/tracker-glow.png",
            size = 64,
            scale = 0.25,
            draw_as_light = true
@@ -183,6 +183,6 @@ if mods["ThemTharHills"] and (data.raw.item["gyroscope"] or data.raw.item["gyro"
 end
 
 --It's not generally kosher to do this before data-updates but we need to get there before barrel recipes get generated.
-data.raw.fluid["crude-oil"].icon = "__LasingAround__/graphics/icons/crude-oil.png"
+data.raw.fluid["crude-oil"].icon = "__LasingAround-Updated__/graphics/icons/crude-oil.png"
 data.raw.fluid["crude-oil"].flow_color = {r=0.5, g=0.35, b=0.2}
 data.raw.fluid["crude-oil"].base_color = {r=0.25, g=0.15, b=0.0}

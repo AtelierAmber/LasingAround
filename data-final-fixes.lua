@@ -7,7 +7,7 @@ table.insert(data.raw["assembling-machine"]["assembling-machine-2"]["crafting_ca
 table.insert(data.raw["assembling-machine"]["assembling-machine-3"]["crafting_categories"], "laser-assembling")
 
 if mods["Krastorio2"] then
-  data.raw.fluid["crude-oil"].icon = "__LasingAround__/graphics/icons/crude-oil.png"
+  data.raw.fluid["crude-oil"].icon = "__LasingAround-Updated__/graphics/icons/crude-oil.png"
 end
 
 if data.raw["assembling-machine"]["se-space-assembling-machine"] then
@@ -20,11 +20,11 @@ if data.raw.item["micron-tolerance-components"] then
   microvalve.name = "invar-valve-micron-tolerance"
   microvalve.icons = {
     {
-      icon = "__IfNickel__/graphics/icons/invar-valve.png",
+      icon = "__IfNickel-Updated__/graphics/icons/invar-valve.png",
       icon_size = 64
     },
     {
-      icon = "__LasingAround__/graphics/icons/micron-tolerance-components.png",
+      icon = "__LasingAround-Updated__/graphics/icons/micron-tolerance-components.png",
       icon_size = 64,
       scale = 0.25,
       shift = {-8, -8}
@@ -38,11 +38,11 @@ if data.raw.item["micron-tolerance-components"] then
     microthruster.name = "gimbaled-thruster-micron-tolerance"
     microthruster.icons = {
       {
-        icon = "__IfNickel__/graphics/icons/gimbaled-thruster.png",
+        icon = "__IfNickel-Updated__/graphics/icons/gimbaled-thruster.png",
         icon_size = 64
       },
       {
-        icon = "__LasingAround__/graphics/icons/micron-tolerance-components.png",
+        icon = "__LasingAround-Updated__/graphics/icons/micron-tolerance-components.png",
         icon_size = 64,
         scale = 0.25,
         shift = {-8, -8}
@@ -67,7 +67,7 @@ if data.raw.item["micron-tolerance-components"] then
         icon_size = 64
       },
       {
-        icon = "__LasingAround__/graphics/icons/micron-tolerance-components.png",
+        icon = "__LasingAround-Updated__/graphics/icons/micron-tolerance-components.png",
         icon_size = 64,
         scale = 0.25,
         shift = {-8, -8}
@@ -100,7 +100,7 @@ if data.raw.item["micron-tolerance-components"] then
             icon_size = 64
           },
           {
-            icon = "__LasingAround__/graphics/icons/micron-tolerance-components.png",
+            icon = "__LasingAround-Updated__/graphics/icons/micron-tolerance-components.png",
             icon_size = 64,
             scale = 0.25,
             shift = {-8, -8}
@@ -124,7 +124,7 @@ if data.raw.item["micron-tolerance-components"] then
             icon_size = 128
           },
           {
-            icon = "__LasingAround__/graphics/icons/micron-tolerance-components.png",
+            icon = "__LasingAround-Updated__/graphics/icons/micron-tolerance-components.png",
             icon_size = 64,
             scale = 0.25,
             shift = {-8, -8}
@@ -144,7 +144,7 @@ if data.raw.item["micron-tolerance-components"] then
           icon_mipmaps = 4
         },
         {
-          icon = "__LasingAround__/graphics/icons/micron-tolerance-components.png",
+          icon = "__LasingAround-Updated__/graphics/icons/micron-tolerance-components.png",
           icon_size = 64,
           scale = 0.25,
           shift = {-8, -8}
@@ -166,7 +166,7 @@ require("compat.final")
 require("lasermill_recipe_generator")
 
 if deadlock and data.raw.item["micron-tolerance-components"] then
-  deadlock.add_stack("micron-tolerance-components", "__LasingAround__/graphics/icons/micron-tolerance-components-stacked.png", "deadlock-stacking-2", 64)
+  deadlock.add_stack("micron-tolerance-components", "__LasingAround-Updated__/graphics/icons/micron-tolerance-components-stacked.png", "deadlock-stacking-2", 64)
 end
 
 if deadlock_crating and data.raw.item["micron-tolerance-components"] then
