@@ -51,7 +51,7 @@ data:extend({
         recipe = "helium-laser"
       }
     },
-    prerequisites = {"laser", (not mods["LunarLandings"]) and "helium-extraction" or nil},
+    prerequisites = tf.compilePrereqs{"laser", (not mods["LunarLandings"]) and "helium-extraction" or nil},
     unit = {
       count = 150,
       ingredients = {
@@ -109,7 +109,7 @@ data:extend({
         recipe = "stack-filter-inserter"
       }
     },
-    prerequisites = {"helium-laser", ic_in_scanner and "advanced-electronics-2" or nil},
+    prerequisites = tf.compilePrereqs{"helium-laser", ic_in_scanner and "advanced-electronics-2" or nil},
     unit = {
       count = 100,
       ingredients = {
@@ -163,7 +163,7 @@ data:extend({
         recipe = "laser-mill"
       }
     },
-    prerequisites = {"carbon-dioxide-laser", (not mods["LunarLandings"]) and "helium-extraction" or nil},
+    prerequisites = tf.compilePrereqs{"carbon-dioxide-laser", (not mods["LunarLandings"]) and "helium-extraction" or nil},
     unit = {
       count = 500,
       ingredients = {
@@ -233,10 +233,11 @@ if data.raw.item["tracker"] then
           recipe = "tracker"
         }
       },
-      prerequisites = {"helium-laser", (mods["space-exploration"] or mods["LunarLandings"]) and (data.raw.technology["graphene"] and "graphene" or (data.raw.recipe["gyroscope"] and "gyroscope" or "gyro")) or "utility-science-pack"},
+      prerequisites = tf.compilePrereqs{"helium-laser", 
+        (mods["space-exploration"] or mods["LunarLandings"]) and (data.raw.technology["graphene"] and "graphene" or (data.raw.recipe["gyroscope"] and "gyroscope" or "gyro")) or "utility-science-pack"},
       unit = {
         count = 150,
-        ingredients = {
+        ingredients = tf.compilePrereqs{
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },

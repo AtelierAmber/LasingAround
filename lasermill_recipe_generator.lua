@@ -4,7 +4,7 @@ local deepcopy = require("util").table.deepcopy
 
 if mods["Krastorio2"] and data.raw.recipe["iron-gear-wheel"] then
   --I don't know why Krastorio is only sometimes bulkifying this recipe.
-  if (data.raw.recipe["iron-gear-wheel"].normal and data.raw.recipe["iron-gear-wheel"].normal.energy_required == 2) or data.raw.recipe["iron-gear-wheel"].energy_required == 2 then
+  if data.raw.recipe["iron-gear-wheel"].energy_required == 2 then
     -- recipe has been bulkified to cost of 4 plates
     data.raw.recipe["iron-gear-wheel"].lasermill.helium = 2
   else
@@ -219,7 +219,7 @@ for name, recipe in pairs(data.raw.recipe) do
         new_recipes_helium[name] = lasdata.helium or 1
         recipe.category = "laser-milling-exclusive"
         if lasdata.multiply then
-          new_recipes_multipliers[recipe_copy.name] = lasdata.multiply
+          new_recipes_multipliers[recipe.name] = lasdata.multiply
         end
       end
       if (not lasdata.convert) or (mods["space-exploration"] and lasdata.se_variant and lasdata.convert) then
@@ -263,23 +263,15 @@ for name, recipe in pairs(data.raw.recipe) do
 
         if hide_duplicates then
           recipe_copy.hide_from_player_crafting = true
-          if recipe_copy.normal then recipe_copy.normal.hide_from_player_crafting = true end
-          if recipe_copy.expensive then recipe_copy.expensive.hide_from_player_crafting = true end
         end
 
         recipe_copy.always_show_made_in = true
-        if recipe_copy.normal then recipe_copy.normal.always_show_made_in = true end
-        if recipe_copy.expensive then recipe_copy.expensive.always_show_made_in = true end
 
         --allow more convenience for specifying this
         if lasdata.unlock == true then
           recipe_copy.enabled = true
-          if recipe_copy.normal then recipe_copy.normal.enabled = true end
-          if recipe_copy.expensive then recipe_copy.expensive.enabled = true end
         else
           recipe_copy.enabled = false
-          if recipe_copy.normal then recipe_copy.normal.enabled = false end
-          if recipe_copy.expensive then recipe_copy.expensive.enabled = false end
           if lasdata.unlock ~= false then
             if lasdata.unlock == nil then lasdata.unlock = {"laser-mill"} end
             if type(lasdata.unlock) == "string" then lasdata.unlock = {lasdata.unlock} end
@@ -315,21 +307,14 @@ for name, multiplier in pairs(new_recipes_multipliers) do
 end
 
 for name, helium in pairs(new_recipes_helium) do
-  rm.AddIngredient(name, "helium", helium, helium)
+  rm.AddIngredient(name, "helium", helium)
 end
 
 --Get a reference to all prodmods to avoid doing these checks for each recipe
-local prodmods = {}
-for k, v in pairs(data.raw.module) do
-  if v.effect and v.effect["productivity"] and v.limitation then
-    table.insert(prodmods, v)
-  end
-end
-
 for k, v in pairs(new_recipes_productivity) do
   if data.raw.recipe[v] then
-    for j, i in pairs(prodmods) do
-      table.insert(i.limitation, v)
-    end
+    local cat = data.raw.recipe[v].allowed_module_categories or {}
+    table.insert(cat, "productivity")
+    data.raw.recipe[v].allowed_module_categories = cat
   end
 end

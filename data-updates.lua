@@ -15,12 +15,6 @@ rm.ReplaceProportional("oil-processing-heavy", "crude-oil", "filtered-oil", 1)
 rm.ReplaceProportional("flamethrower-ammo", "crude-oil", "filtered-oil", 1)
 
 if not rm.CheckIngredient("basic-oil-processing", "water") then
-  if data.raw.recipe["basic-oil-processing"] and data.raw.recipe["basic-oil-processing"].normal and data.raw.recipe["basic-oil-processing"].normal.ingredients then
-    data.raw.recipe["basic-oil-processing"].normal.ingredients[1].fluidbox_index = 2
-  end
-  if data.raw.recipe["basic-oil-processing"] and data.raw.recipe["basic-oil-processing"].expensive and data.raw.recipe["basic-oil-processing"].expensive.ingredients then
-    data.raw.recipe["basic-oil-processing"].expensive.ingredients[1].fluidbox_index = 2
-  end
   if data.raw.recipe["basic-oil-processing"] and data.raw.recipe["basic-oil-processing"].ingredients then
     data.raw.recipe["basic-oil-processing"].ingredients[1].fluidbox_index = 2
   end
@@ -32,8 +26,8 @@ if mods["bzgold"] and not (mods["ThemTharHills"] or mods["space-exploration"]) t
 end
 
 tf.removeRecipeUnlock("stack-inserter", "stack-filter-inserter")
-rm.RemoveIngredient("stack-filter-inserter", "electronic-circuit", 99999, 99999)
-rm.AddIngredient("stack-filter-inserter", "scanner", 1, 1)
+rm.RemoveIngredient("stack-filter-inserter", "electronic-circuit", 99999)
+rm.AddIngredient("stack-filter-inserter", "scanner", 1)
 if data.raw.technology["stack-filter-inserter"] then
   tf.addSciencePack("stack-filter-inserter", "chemical-science-pack")
   --tf.removeSciencePack("stack-filter-inserter", "basic-tech-card")
@@ -50,15 +44,15 @@ if data.raw.item["advanced-machining-tool"] then
   rm.ReplaceProportional("advanced-machining-tool", "speed-module", "scanner", 1)
   rm.ReplaceProportional("advanced-machining-tool", "integrated-circuit", "scanner", 0.2)
   if not rm.CheckIngredient("advanced-machining-tool", "scanner") then
-    rm.AddIngredient("advanced-machining-tool", "scanner", 1, 1)
-    rm.RemoveIngredient("advanced-machining-tool", "advanced-circuit", 99999, 99999)
+    rm.AddIngredient("advanced-machining-tool", "scanner", 1)
+    rm.RemoveIngredient("advanced-machining-tool", "advanced-circuit", 99999)
   end
 else
   rm.ReplaceProportional("assembling-machine-3", "speed-module", "scanner", 1)
   rm.ReplaceProportional("assembling-machine-3", "integrated-circuit", "scanner", 0.2)
   if not rm.CheckIngredient("assembling-machine-3", "scanner") then
-    rm.AddIngredient("assembling-machine-3", "scanner", 2, 2)
-    rm.RemoveIngredient("assembling-machine-3", "advanced-circuit", 99999, 99999)
+    rm.AddIngredient("assembling-machine-3", "scanner", 2)
+    rm.RemoveIngredient("assembling-machine-3", "advanced-circuit", 99999)
   end
 end
 
@@ -70,43 +64,43 @@ end
 if data.raw.item["tracker"] then
   if not mods["LunarLandings"] then
     tf.addPrereq("rocket-control-unit", "tracking-systems")
-    rm.RemoveIngredient("rocket-control-unit", "gyro", 99999, 99999)
-    rm.RemoveIngredient("rocket-control-unit", "gyroscope", 99999, 99999)
-    rm.RemoveIngredient("rocket-control-unit", "transceiver", 99999, 99999)
+    rm.RemoveIngredient("rocket-control-unit", "gyro", 99999)
+    rm.RemoveIngredient("rocket-control-unit", "gyroscope", 99999)
+    rm.RemoveIngredient("rocket-control-unit", "transceiver", 99999)
     if mods["space-exploration"] then
-      rm.RemoveIngredient("rocket-control-unit", "graphene", 99999, 99999)
+      rm.RemoveIngredient("rocket-control-unit", "graphene", 99999)
     end
-    rm.AddIngredient("rocket-control-unit", "tracker", 1, 1)
+    rm.AddIngredient("rocket-control-unit", "tracker", 1)
   end
 
   tf.addPrereq("artillery", "tracking-systems")
-  rm.RemoveIngredient("artillery-shell", "transceiver", 99999, 99999)
-  rm.RemoveIngredient("artillery-shell", "gyroscope", 99999, 99999)
-  rm.RemoveIngredient("artillery-shell", "gyro", 99999, 99999)
-  rm.RemoveIngredient("artillery-shell", "radar", 99999, 99999)
-  rm.AddIngredient("artillery-shell", "tracker", 1, 1)
+  rm.RemoveIngredient("artillery-shell", "transceiver", 99999)
+  rm.RemoveIngredient("artillery-shell", "gyroscope", 99999)
+  rm.RemoveIngredient("artillery-shell", "gyro", 99999)
+  rm.RemoveIngredient("artillery-shell", "radar", 99999)
+  rm.AddIngredient("artillery-shell", "tracker", 1)
   if not data.raw.item["skyseeker-armature"] then
-    rm.RemoveIngredient("artillery-turret", "gyroscope", 99999, 99999)
-    rm.RemoveIngredient("artillery-turret", "gyro", 99999, 99999)
-    rm.RemoveIngredient("artillery-wagon", "gyroscope", 99999, 99999)
-    rm.RemoveIngredient("artillery-wagon", "gyro", 99999, 99999)
-    rm.AddIngredient("artillery-turret", "tracker", 10, 10)
-    rm.AddIngredient("artillery-wagon", "tracker", 10, 10)
+    rm.RemoveIngredient("artillery-turret", "gyroscope", 99999)
+    rm.RemoveIngredient("artillery-turret", "gyro", 99999)
+    rm.RemoveIngredient("artillery-wagon", "gyroscope", 99999)
+    rm.RemoveIngredient("artillery-wagon", "gyro", 99999)
+    rm.AddIngredient("artillery-turret", "tracker", 10)
+    rm.AddIngredient("artillery-wagon", "tracker", 10)
   end
   tf.addPrereq("skyseeker-armature", "tracking-systems")
   if not mods["aai-containers"] then
     tf.addPrereq("logistic-system", "tracking-systems")
 
-    rm.RemoveIngredient("logistic-chest-requester", "advanced-circuit", 1, 1)
-    rm.ReplaceIngredient("logistic-chest-requester", "transceiver", "tracker", 1, 1)
-    rm.RemoveIngredient("logistic-chest-buffer", "advanced-circuit", 1, 1)
-    rm.ReplaceIngredient("logistic-chest-buffer", "transceiver", "tracker", 1, 1)
-    rm.RemoveIngredient("logistic-chest-active-provider", "advanced-circuit", 1, 1)
-    rm.ReplaceIngredient("logistic-chest-active-provider", "transceiver", "tracker", 1, 1)
+    rm.RemoveIngredient("logistic-chest-requester", "advanced-circuit", 1)
+    rm.ReplaceIngredient("logistic-chest-requester", "transceiver", "tracker", 1)
+    rm.RemoveIngredient("logistic-chest-buffer", "advanced-circuit", 1)
+    rm.ReplaceIngredient("logistic-chest-buffer", "transceiver", "tracker", 1)
+    rm.RemoveIngredient("logistic-chest-active-provider", "advanced-circuit", 1)
+    rm.ReplaceIngredient("logistic-chest-active-provider", "transceiver", "tracker", 1)
   end
 
   tf.addPrereq("personal-roboport-mk2-equipment", "tracking-systems")
-  rm.AddIngredient("personal-roboport-mk2-equipment", "tracker", 20, 20)
+  rm.AddIngredient("personal-roboport-mk2-equipment", "tracker", 20)
 
   if not mods["space-exploration"] then
     tf.removePrereq("logistic-system", "utility-science-pack")
@@ -119,20 +113,20 @@ if not (mods["space-exploration"] or mods["LunarLandings"]) then
 end
 
 tf.addPrereq("effect-transmission", "helium-laser")
-rm.AddIngredient("beacon", "helium-laser", 5, 5)
+rm.AddIngredient("beacon", "helium-laser", 5)
 
 tf.addPrereq("laser-turret", "carbon-dioxide-laser")
 tf.removePrereq("laser-turret", "laser")
-rm.RemoveIngredient("laser-turret", "glass", 99999, 99999)
-rm.RemoveIngredient("laser-turret", "bismuth-glass", 99999, 99999)
-rm.RemoveIngredient("laser-turret", "diamond", 99999, 99999)
-rm.RemoveIngredient("laser-turret", "ti-sapphire", 99999, 99999)
-rm.RemoveIngredient("laser-turret", "quartz", 99999, 99999)
-rm.ReplaceIngredient("laser-turret", "hv-power-regulator", "carbon-dioxide-laser", 1, 1)
+rm.RemoveIngredient("laser-turret", "glass", 99999)
+rm.RemoveIngredient("laser-turret", "bismuth-glass", 99999)
+rm.RemoveIngredient("laser-turret", "diamond", 99999)
+rm.RemoveIngredient("laser-turret", "ti-sapphire", 99999)
+rm.RemoveIngredient("laser-turret", "quartz", 99999)
+rm.ReplaceIngredient("laser-turret", "hv-power-regulator", "carbon-dioxide-laser", 1)
 
 tf.removePrereq("distractor", "laser")
 tf.addPrereq("distractor", "carbon-dioxide-laser")
-rm.AddIngredient("distractor-capsule", "empty-amplifier-tube", 1, 1)
+rm.AddIngredient("distractor-capsule", "empty-amplifier-tube", 1)
 
 if data.raw.item["micron-tolerance-components"] then
   if parts.nickelExperiment then
@@ -140,12 +134,12 @@ if data.raw.item["micron-tolerance-components"] then
       if rm.CheckIngredient("gimbaled-thruster", "invar-plate") then
         rm.ReplaceProportional("gimbaled-thruster", "invar-plate", "micron-tolerance-components", 6)
       else
-        rm.AddIngredient("gimbaled-thruster", "micron-tolerance-components", 4, 4)
+        rm.AddIngredient("gimbaled-thruster", "micron-tolerance-components", 4)
       end
       tf.addPrereq("gimbaled-thruster", "micron-tolerance-manufacturing")
     end
 
-    rm.AddIngredient("advanced-machining-tool", "micron-tolerance-components", 1, 1)
+    rm.AddIngredient("advanced-machining-tool", "micron-tolerance-components", 1)
     if not mods["space-exploration"] then
       tf.addPrereq("automation-3", "micron-tolerance-manufacturing")
     end
@@ -221,31 +215,31 @@ if mods["LunarLandings"] then
   rm.SetCategory("spectroscope", "advanced-circuit-crafting")
   rm.SetCategory("scanner", "advanced-circuit-crafting")
 
-  rm.ReplaceIngredient("carbon-dioxide-laser", "petroleum-gas", "ll-oxygen", 250, 250)
-  rm.AddIngredient("carbon-dioxide-laser", "solid-fuel", 1, 1)
+  rm.ReplaceIngredient("carbon-dioxide-laser", "petroleum-gas", "ll-oxygen", 250)
+  rm.AddIngredient("carbon-dioxide-laser", "solid-fuel", 1)
 
   tf.addPrereq("laser-mill", "production-science-pack")
   tf.addSciencePack("laser-mill", "production-science-pack")
   if data.raw.item["micron-tolerance-components"] then
     tf.addSciencePack("micron-tolerance-manufacturing", "production-science-pack")
     rm.SetCategory("spectroscope-micron-tolerance", "advanced-circuit-crafting")
-    rm.AddIngredient("ll-quantum-resonator", "micron-tolerance-components", 50, 50)
+    rm.AddIngredient("ll-quantum-resonator", "micron-tolerance-components", 50)
   end
 
   tf.addPrereq("ll-space-data-collection", "spectroscopy")
-  rm.AddIngredient("ll-data-card", "spectroscope", 1, 1)
+  rm.AddIngredient("ll-data-card", "spectroscope", 1)
   rm.AddProductRaw("ll-data-card", {type="item", name="spectroscope", amount=1, probability=0.75})
-  rm.AddIngredient("ll-quantum-data-card", "spectroscope", 1, 1)
+  rm.AddIngredient("ll-quantum-data-card", "spectroscope", 1)
   rm.AddProductRaw("ll-quantum-data-card", {type="item", name="spectroscope", amount=1, probability=0.33})
 
-  rm.AddIngredient("ll-telescope", "spectroscope", 20, 20)
+  rm.AddIngredient("ll-telescope", "spectroscope", 20)
 
   tf.addPrereq("ll-quantum-resonation", "carbon-dioxide-laser")
-  rm.ReplaceIngredient("ll-quantum-resonator", "lab", "carbon-dioxide-laser", 5, 5)
+  rm.ReplaceIngredient("ll-quantum-resonator", "lab", "carbon-dioxide-laser", 5)
 
-  rm.AddIngredient("ll-superposition-right-left", "carbon-dioxide-laser", 1, 1)
+  rm.AddIngredient("ll-superposition-right-left", "carbon-dioxide-laser", 1)
   rm.AddProductRaw("ll-superposition-right-left", {type="item", name="carbon-dioxide-laser", amount=1, probability=0.9})
-  rm.AddIngredient("ll-superposition-up-down", "carbon-dioxide-laser", 1, 1)
+  rm.AddIngredient("ll-superposition-up-down", "carbon-dioxide-laser", 1)
   rm.AddProductRaw("ll-superposition-up-down", {type="item", name="carbon-dioxide-laser", amount=1, probability=0.9})
 
   if data.raw.item["tracker"] then

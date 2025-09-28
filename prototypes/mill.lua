@@ -243,7 +243,7 @@ local lasermill = {
   },
   open_sound = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"].open_sound),
   close_sound = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"].close_sound),
-  vehicle_impact_sound = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"].vehicle_impact_sound)
+  impact_category = data.raw["assembling-machine"]["assembling-machine-3"].impact_category
 }
 
 data:extend({

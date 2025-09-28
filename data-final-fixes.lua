@@ -51,10 +51,10 @@ if data.raw.item["micron-tolerance-components"] then
     data:extend({microthruster})
     rm.multiply("gimbaled-thruster-micron-tolerance", 4, true, true, true)
     rm.ReplaceProportional("gimbaled-thruster-micron-tolerance", "invar-plate", "ll-alumina", 1.5)
-    rm.RemoveIngredient("gimbaled-thruster-micron-tolerance", "complex-joint", 1, 1)
-    rm.RemoveIngredient("gimbaled-thruster-micron-tolerance", "bearing", 2, 2)
-    rm.RemoveIngredient("gimbaled-thruster-micron-tolerance", "iron-gear-wheel", 4, 4)
-    rm.AddIngredient("gimbaled-thruster-micron-tolerance", "micron-tolerance-components", 4, 4)
+    rm.RemoveIngredient("gimbaled-thruster-micron-tolerance", "complex-joint", 1)
+    rm.RemoveIngredient("gimbaled-thruster-micron-tolerance", "bearing", 2)
+    rm.RemoveIngredient("gimbaled-thruster-micron-tolerance", "iron-gear-wheel", 4)
+    rm.AddIngredient("gimbaled-thruster-micron-tolerance", "micron-tolerance-components", 4)
     tf.addRecipeUnlock("micron-tolerance-space-machines", "gimbaled-thruster-micron-tolerance")
   end
 
@@ -74,8 +74,8 @@ if data.raw.item["micron-tolerance-components"] then
       }
     }
     data:extend({microseeker})
-    rm.ReplaceProportional("skyseeker-armature-micron-tolerance", "iron-gear-wheel", "micron-tolerance-components", 1, 1)
-    rm.ReplaceProportional("skyseeker-armature-micron-tolerance", "kr-steel-gear-wheel", "micron-tolerance-components", 0.5, 0.5)
+    rm.ReplaceProportional("skyseeker-armature-micron-tolerance", "iron-gear-wheel", "micron-tolerance-components", 1)
+    rm.ReplaceProportional("skyseeker-armature-micron-tolerance", "kr-steel-gear-wheel", "micron-tolerance-components", 0.5)
     tf.addRecipeUnlock("micron-tolerance-space-machines", "skyseeker-armature-micron-tolerance")
   end
 
@@ -92,8 +92,8 @@ if data.raw.item["micron-tolerance-components"] then
       gyro_recipe = data.raw.recipe["gyroscope-micron-tolerance"] -- i don't know if data:extend does a deepcopy. i should refactor my recipe manipulators to allow passing a prototype as well as a name
       if rm.CheckIngredient("gyroscope-micron-tolerance", "bearing") then
         --brass tacks gyroscope
-        rm.RemoveIngredient("gyroscope-micron-tolerance", "bearing", 1, 1)
-        rm.AddIngredient("gyroscope-micron-tolerance", "micron-tolerance-components", 2, 2)
+        rm.RemoveIngredient("gyroscope-micron-tolerance", "bearing", 1)
+        rm.AddIngredient("gyroscope-micron-tolerance", "micron-tolerance-components", 2)
         gyro_recipe.icons = {
           {
             icon = parts.qualityIconPath("brasstacks", "icons/gyroscope.png"),
@@ -107,15 +107,15 @@ if data.raw.item["micron-tolerance-components"] then
           }
         }
       else
-        if rm.RemoveIngredient("gyroscope-micron-tolerance", "diamond", 1, 1) then
-          rm.AddIngredient("gyroscope-micron-tolerance", "micron-tolerance-components", 2, 2)
-        else if rm.RemoveIngredient("gyroscope-micron-tolerance", "titanium-plate", 1, 1) then
-          rm.AddIngredient("gyroscope-micron-tolerance", "micron-tolerance-components", 2, 2)
-        else if rm.RemoveIngredient("gyroscope-micron-tolerance", "tungsten-plate", 1, 1) then
-          rm.AddIngredient("gyroscope-micron-tolerance", "micron-tolerance-components", 1, 1)
+        if rm.RemoveIngredient("gyroscope-micron-tolerance", "diamond", 1) then
+          rm.AddIngredient("gyroscope-micron-tolerance", "micron-tolerance-components", 2)
+        else if rm.RemoveIngredient("gyroscope-micron-tolerance", "titanium-plate", 1) then
+          rm.AddIngredient("gyroscope-micron-tolerance", "micron-tolerance-components", 2)
+        else if rm.RemoveIngredient("gyroscope-micron-tolerance", "tungsten-plate", 1) then
+          rm.AddIngredient("gyroscope-micron-tolerance", "micron-tolerance-components", 1)
           gyro_recipe.result_count = 5
         else
-          rm.AddIngredient("gyroscope-micron-tolerance", "micron-tolerance-components", 1, 1)
+          rm.AddIngredient("gyroscope-micron-tolerance", "micron-tolerance-components", 1)
           gyro_recipe.result_count = 6
         end end end
         gyro_recipe.icons = {
@@ -150,12 +150,12 @@ if data.raw.item["micron-tolerance-components"] then
           shift = {-8, -8}
         }
       }
-      rm.ReplaceIngredient("rocket-control-unit-micron-tolerance", "advanced-circuit", "electronic-circuit", 1, 1)
+      rm.ReplaceIngredient("rocket-control-unit-micron-tolerance", "advanced-circuit", "electronic-circuit", 1)
       if rm.CheckIngredient("rocket-control-unit-micron-tolerance", "advanced-circuit") then
-        rm.ReplaceIngredient("rocket-control-unit-micron-tolerance", "advanced-circuit", "electronic-circuit", 1, 1)
-        rm.AddIngredient("rocket-control-unit-micron-tolerance", "micron-tolerance-components", 3, 3)
+        rm.ReplaceIngredient("rocket-control-unit-micron-tolerance", "advanced-circuit", "electronic-circuit", 1)
+        rm.AddIngredient("rocket-control-unit-micron-tolerance", "micron-tolerance-components", 3)
       else
-        rm.AddIngredient("rocket-control-unit-micron-tolerance", "micron-tolerance-components", 2, 2)
+        rm.AddIngredient("rocket-control-unit-micron-tolerance", "micron-tolerance-components", 2)
       end
       tf.addRecipeUnlock("micron-tolerance-instruments", "rocket-control-unit-micron-tolerance")
     end

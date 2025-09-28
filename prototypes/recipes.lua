@@ -95,7 +95,7 @@ data:extend({
     category = "oil-processing",
     enabled = false,
     energy_required = 2,
-    ingredients = {{type="fluid", name="crude-oil", amount=100}, {type="fluid", name="steam", amount=20}, {"spectroscope", 1}},
+    ingredients = {{type="fluid", name="crude-oil", amount=100}, {type="fluid", name="steam", amount=20}, {type="item", name="spectroscope", amount=1}},
     results = {{type="fluid", name="filtered-oil", amount=100, catalyst_amount=100}, {type="fluid", name="helium", amount=helium_yield * 3}, {type="item", name="spectroscope", amount=1, probability=0.99, catalyst_amount=1}, {type="fluid", name="crude-oil", amount=5, catalyst_amount=5}},
     allow_decomposition = false
   },
@@ -105,9 +105,9 @@ data:extend({
     category = "advanced-crafting",
     enabled = false,
     energy_required = 50,
-    ingredients = {{"gold-ingot", 1}, parts.preferred({"ll-silica", "bismuth-glass", "glass", "quartz", "silica", "tin-plate", "iron-plate"}, {40, 20, 20, 10, 50, 20, 10}), parts.preferred({"silver-plate", "copper-plate"}, {10, 10}), parts.optionalIngredient("tungsten-plate", 10)},
-    result = "empty-amplifier-tube",
-    result_count = 10,
+    ingredients = {{type="item", name="gold-ingot", 1}, parts.preferred({"ll-silica", "bismuth-glass", "glass", "quartz", "silica", "tin-plate", "iron-plate"}, {40, 20, 20, 10, 50, 20, 10}), 
+      parts.preferred({"silver-plate", "copper-plate"}, {10, 10}), parts.optionalIngredient("tungsten-plate", 10)},
+    results = {{type="item", name="empty-amplifier-tube",amount=10}},
     lasermill = {
       helium = 30,
       productivity = true
@@ -119,8 +119,10 @@ data:extend({
     category = "advanced-crafting",
     enabled = false,
     energy_required = 5,
-    ingredients = {parts.preferred({"gold-plate", "fi_materials_gold", "silver-wire", "tinned-cable", "copper-cable"}, {1, 1, 2, 2, 2}), parts.preferred({"ll-silica", "bismuth-glass", "glass", "quartz", "silica", "tin-plate", "iron-plate"}, {4, 2, 2, 1, 5, 2, 1}), parts.preferred({"silver-plate", "copper-plate"}, {1, 1}), parts.optionalIngredient("tungsten-plate", 1)},
-    result = "empty-amplifier-tube",
+    ingredients = {parts.preferred({"gold-plate", "fi_materials_gold", "silver-wire", "tinned-cable", "copper-cable"}, {1, 1, 2, 2, 2}), 
+      parts.preferred({"ll-silica", "bismuth-glass", "glass", "quartz", "silica", "tin-plate", "iron-plate"}, {4, 2, 2, 1, 5, 2, 1}), parts.preferred({"silver-plate", "copper-plate"}, {1, 1}), 
+        parts.optionalIngredient("tungsten-plate", 1)},
+    results = {{type="item", name="empty-amplifier-tube", amount=1}},
     lasermill = {
       helium = 3,
       productivity = true
@@ -133,8 +135,9 @@ data:extend({
     category = "crafting-with-fluid",
     enabled = false,
     energy_required = 2,
-    ingredients = {{type="fluid", name="helium", amount=25}, {"empty-amplifier-tube", 1}, {"electronic-circuit", 1}, {"battery", 1}, parts.preferred({"optical-fiber", "quartz"}, {1, 1})},
-    result = "helium-laser"
+    ingredients = {{type="fluid", name="helium", amount=25}, {type="item", name="empty-amplifier-tube", amount=1}, {type="item", name="electronic-circuit", amount=1}, {type="item", name="battery", amount=1}, 
+      parts.preferred({"optical-fiber", "quartz"}, {1, 1})},
+    results = {{type="item", name="helium-laser", amount=1}}
   },
   {
     type = "recipe",
@@ -143,8 +146,9 @@ data:extend({
     category = "crafting-with-fluid",
     enabled = false,
     energy_required = 2,
-    ingredients = {{type="fluid", name="petroleum-gas", amount=100}, {"empty-amplifier-tube", 1}, {"advanced-circuit", 1}, {"battery", 10}, parts.preferred({"ti-sapphire", "diamond", "el_energy_crystal_item"}, {1, 1, 1}), parts.optionalIngredient("advanced-cable", 1)},
-    result = "carbon-dioxide-laser"
+    ingredients = {{type="fluid", name="petroleum-gas", amount=100}, {type="item", name="empty-amplifier-tube", amount=1}, {type="item", name="advanced-circuit", amount=1}, {type="item", name="battery", amount=10}, 
+      parts.preferred({"ti-sapphire", "diamond", "el_energy_crystal_item"}, {1, 1, 1}), parts.optionalIngredient("advanced-cable", 1)},
+    results = {{type="item", name="carbon-dioxide-laser", amount=1}}
   },
   {
     type = "recipe",
@@ -153,8 +157,9 @@ data:extend({
     category = "crafting",
     enabled = false,
     energy_required = 3,
-    ingredients = {{"helium-laser", 1}, ic_in_scanner and {"integrated-circuit", 5} or {"electronic-circuit", 1}, {"advanced-circuit", ic_in_scanner and 1 or 3}, parts.preferred({"glass", "optical-fiber"}, {2, 3})},
-    result = "scanner"
+    ingredients = {{type="item", name="helium-laser", amount=1}, ic_in_scanner and {type="item", name="integrated-circuit", amount=5} or {type="item", name="electronic-circuit", amount=1}, 
+      {type="item", name="advanced-circuit", amount=ic_in_scanner and 1 or 3}, parts.preferred({"glass", "optical-fiber"}, {2, 3})},
+    results = {{type="item", name="scanner", amount=1}}
   },
   {
     type = "recipe",
@@ -163,17 +168,20 @@ data:extend({
     category = "crafting",
     enabled = false,
     energy_required = 3,
-    ingredients = {{"helium-laser", 1}, parts.preferred({"ll-silicon", "silver-plate", "copper-plate"}, {2, 3, 3}), parts.preferred({"silicon-wafer", "electronic-circuit"}, {1, 1}), parts.preferred({"glass", "ll-silica", "bismuth-glass"}, {1, 2, 1})},
-    result = "spectroscope"
+    ingredients = {{type="item", name="helium-laser", amount=1}, parts.preferred({"ll-silicon", "silver-plate", "copper-plate"}, {2, 3, 3}), 
+      parts.preferred({"silicon-wafer", "electronic-circuit"}, {1, 1}), parts.preferred({"glass", "ll-silica", "bismuth-glass"}, {1, 2, 1})},
+    results = {{type="item", name="spectroscope", amount=1}}
   },
   {
     type = "recipe",
     name = "laser-mill",
     category = "crafting",
     energy_required = 1,
-    result = "laser-mill",
+    results = {{type="item", name="laser-mill", amount=1}},
     enabled = false,
-    ingredients = {{"assembling-machine-2", 1}, {"carbon-dioxide-laser", 2}, parts.preferred({"complex-joint", "steel-gear-wheel", "bearing", "iron-gear-wheel"}, {2, 4, 4, 10}), parts.preferred({"hv-power-regulator", "advanced-circuit"}, {5, 25}), parts.preferred({"se-heat-shielding", "tungsten-plate"}, {1, 10}), parts.optionalIngredient("cooling-fan", 10), parts.preferred({"bismuth-glass", "glass"}, {10, 10})}
+    ingredients = {{type="item", name="assembling-machine-2", amount=1}, {type="item", name="carbon-dioxide-laser", amount=2}, parts.preferred({"complex-joint", "steel-gear-wheel", "bearing", "iron-gear-wheel"}, 
+      {2, 4, 4, 10}), parts.preferred({"hv-power-regulator", "advanced-circuit"}, {5, 25}), parts.preferred({"se-heat-shielding", "tungsten-plate"}, {1, 10}), 
+      parts.optionalIngredient("cooling-fan", 10), parts.preferred({"bismuth-glass", "glass"}, {10, 10})}
   }
 })
 
@@ -220,7 +228,7 @@ if mods["bzgas"] then
       category = "oil-processing",
       enabled = false,
       energy_required = 10,
-      ingredients = {{type="fluid", name="gas", amount=100}, {type="fluid", name="steam", amount=20}, {"spectroscope", 1}},
+      ingredients = {{type="fluid", name="gas", amount=100}, {type="fluid", name="steam", amount=20}, {type="item", name="spectroscope", amount=1}},
       results = {{type="fluid", name="formaldehyde", amount=90, catalyst_amount=90}, {type="fluid", name="helium", amount=helium_yield * 3}, {type="item", name="spectroscope", amount=1, probability=0.99, catalyst_amount=1}, {type="fluid", name="gas", amount=5, catalyst_amount=5}},
       allow_decomposition = false
     },
@@ -299,7 +307,7 @@ if mods["bzgas"] then
           category = "oil-processing",
           enabled = false,
           energy_required = 12,
-          ingredients = {{type="fluid", name="gas", amount=100}, {type="fluid", name="steam", amount=40}, {"spectroscope", 1}},
+          ingredients = {{type="fluid", name="gas", amount=100}, {type="fluid", name="steam", amount=40}, {type="item", name="spectroscope", amount=1}},
           results = {{type="fluid", name="hydrogen", amount=400, catalyst_amount=400}, {type="fluid", name="helium", amount=helium_yield * 3}, {type="item", name="spectroscope", amount=1, probability=0.99, catalyst_amount=1}, {type="fluid", name="gas", amount=5, catalyst_amount=5}},
           allow_decomposition = false
         }
@@ -379,8 +387,9 @@ if mods["bzgas"] then
           category = "oil-processing",
           enabled = false,
           energy_required = 4,
-          ingredients = {{type="fluid", name="gas", amount=100}, {type="fluid", name="steam", amount=20}, {"spectroscope", 1}},
-          results = {{type="fluid", name="se-methane-gas", amount=100, catalyst_amount=100}, {type="fluid", name="helium", amount=helium_yield * 3}, {type="item", name="spectroscope", amount=1, probability=0.99, catalyst_amount=1}, {type="fluid", name="gas", amount=5, catalyst_amount=5}},
+          ingredients = {{type="fluid", name="gas", amount=100}, {type="fluid", name="steam", amount=20}, {type="item", name="spectroscope", amount=1}},
+          results = {{type="fluid", name="se-methane-gas", amount=100, catalyst_amount=100}, {type="fluid", name="helium", amount=helium_yield * 3}, 
+            {type="item", name="spectroscope", amount=1, probability=0.99, catalyst_amount=1}, {type="fluid", name="gas", amount=5, catalyst_amount=5}},
           allow_decomposition = false
         }
     })
@@ -395,8 +404,9 @@ if data.raw.item["tracker"] then
       category = "crafting",
       enabled = false,
       energy_required = 10,
-      ingredients = {{"transceiver", 1}, {"helium-laser", 1}, parts.preferred({"gyro", "gyroscope"}, {1, 1}), mods["space-exploration"] and parts.preferred({"graphene", "battery"}, {1, 1}) or {"battery", 1}},
-      result = "tracker"
+      ingredients = {{type="item", name="transceiver", amount=1}, {type="item", name="helium-laser", amount=1}, parts.preferred({"gyro", "gyroscope"}, {1, 1}), 
+        mods["space-exploration"] and parts.preferred({"graphene", "battery"}, {1, 1}) or {type="item", name="battery", amount=1}},
+      results = {{type="item", name="tracker", amount=1}}
     }
   })
 end
@@ -409,9 +419,8 @@ if data.raw.item["micron-tolerance-components"] then
       category = "meowing",
       enabled = false,
       energy_required = 4,
-      ingredients = {{"invar-plate", 1}},
-      result = "micron-tolerance-components",
-      result_count = 4,
+      ingredients = {{type="item", name="invar-plate", amount=1}},
+      results = {{type="item", name="micron-tolerance-components",amount=4}},
       lasermill = {
         helium = 2,
         convert = true,
@@ -442,8 +451,9 @@ if data.raw.item["micron-tolerance-components"] then
         category = "crafting",
         enabled = false,
         energy_required = 3,
-        ingredients = {{"helium-laser", 1}, parts.preferred({"silver-plate", "copper-plate"}, {1, 1}), parts.preferred({"silicon-wafer", "electronic-circuit"}, {1, 1}), parts.preferred({"glass", "bismuth-glass"}, {1, 1}), {"micron-tolerance-components", 1}},
-        result = "spectroscope"
+        ingredients = {{type="item", name="helium-laser", amount=1}, parts.preferred({"silver-plate", "copper-plate"}, {1, 1}), 
+          parts.preferred({"silicon-wafer", "electronic-circuit"}, {1, 1}), parts.preferred({"glass", "bismuth-glass"}, {1, 1}), {type="item", name="micron-tolerance-components", amount=1}},
+        results = {{type="item", name="spectroscope", amount=1}}
       },
       {
         type = "recipe",
@@ -451,9 +461,10 @@ if data.raw.item["micron-tolerance-components"] then
         category = "crafting",
         enabled = false,
         energy_required = 10,
-        ingredients = {{"micron-tolerance-components", 5}, {"glass", 10}, {"spectroscope", 1}, {"scanner", 1}, parts.preferred({"gyroscope", "gyro"}, {1, 1}), parts.optionalIngredient("nitric-acid", 25)},
-        result = "laboratory-gear",
-        result_count = 5
+        ingredients = {{type="item", name="micron-tolerance-components", amount=5}, {type="item", name="glass", amount=10}, 
+          {type="item", name="spectroscope", amount=1}, {type="item", name="scanner", amount=1}, 
+          parts.preferred({"gyroscope", "gyro"}, {1, 1}), parts.optionalIngredient("nitric-acid", 25)},
+        results = {{type="item", name="laboratory-gear",amount=5}}
       }
     })
   else
@@ -477,15 +488,16 @@ if data.raw.item["micron-tolerance-components"] then
           category = "crafting",
           enabled = false,
           energy_required = 3,
-          ingredients = {{"helium-laser", 1}, {"ll-silicon", 2}, parts.preferred({"silicon-wafer", "electronic-circuit"}, {1, 1}), {"ll-silica", 2}, {"micron-tolerance-components", 2}},
-          result = "spectroscope"
+          ingredients = {{type="item", name="helium-laser", amount=1}, {type="item", name="ll-silicon", amount=2}, parts.preferred({"silicon-wafer", "electronic-circuit"}, {1, 1}), 
+            {type="item", name="ll-silica", amount=2}, {type="item", name="micron-tolerance-components", amount=2}},
+          results = {{type="item", name="spectroscope", amount=1}}
         }
       })
-      rm.AddIngredient("spectroscope", "electronic-circuit", 2, 2)
+      rm.AddIngredient("spectroscope", "electronic-circuit", 2)
     else
-      rm.AddIngredient("spectroscope", "micron-tolerance-components", 1, 1)
-      rm.RemoveIngredient("spectroscope", "copper-plate", 2, 2)
-      rm.RemoveIngredient("spectroscope", "silver-plate", 2, 2)
+      rm.AddIngredient("spectroscope", "micron-tolerance-components", 1)
+      rm.RemoveIngredient("spectroscope", "copper-plate", 2)
+      rm.RemoveIngredient("spectroscope", "silver-plate", 2)
     end
   end
 end
@@ -541,8 +553,11 @@ if mods["LunarLandings"] then
       },
       energy_required = 60,
       allow_decomposition = false,
-      ingredients = {{"battery", 20}, {"empty-amplifier-tube", 20}, {type="fluid", name="ll-astroflux", amount=50}, {type="item", name="ll-superposed-polariton", amount=1, catalyst_amount=1}, {type="item", name="ll-up-polariton", amount=1, catalyst_amount=1}},
-      results = {{type="item", name="helium-laser", amount=20}, {type="item", name="ll-up-polariton", amount=1, probability=0.2, catalyst_amount=1}, {type="item", name="ll-down-polariton", amount=1, probability=0.4, catalyst_amount=1}, {type="item", name="ll-left-polariton", amount=1, probability=0.6, catalyst_amount=1}, {type="item", name="ll-right-polariton", amount=1, probability=0.8, catalyst_amount=1}},
+      ingredients = {{type="item", name="battery", amount=20}, {type="item", name="empty-amplifier-tube", amount=20}, {type="fluid", name="ll-astroflux", amount=50}, 
+        {type="item", name="ll-superposed-polariton", amount=1, catalyst_amount=1}, {type="item", name="ll-up-polariton", amount=1, catalyst_amount=1}},
+      results = {{type="item", name="helium-laser", amount=20}, {type="item", name="ll-up-polariton", amount=1, probability=0.2, catalyst_amount=1}, 
+        {type="item", name="ll-down-polariton", amount=1, probability=0.4, catalyst_amount=1}, {type="item", name="ll-left-polariton", amount=1, probability=0.6, catalyst_amount=1},
+          {type="item", name="ll-right-polariton", amount=1, probability=0.8, catalyst_amount=1}},
       main_product = "helium-laser",
       enabled = false
     }
@@ -567,7 +582,7 @@ if mods["LunarLandings"] then
         },
         energy_required = 800,
         allow_decomposition = false,
-        ingredients = {{"ll-quantum-processor", 1}, {"tracker", 20}, {"ll-data-card", 1}},
+        ingredients = {{type="item", name="ll-quantum-processor", amount=1}, {type="item", name="tracker", amount=20}, {type="item", name="ll-data-card", amount=1}},
         results = {{type="item", name="rocket-control-unit", amount=20}, {type="item", name="ll-junk-data-card", amount=1, catalyst_amount=1}},
         main_product = "rocket-control-unit",
         enabled = false
