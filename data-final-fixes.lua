@@ -87,6 +87,7 @@ if data.raw.item["micron-tolerance-components"] then
       gyro_recipe = deepcopy(data.raw.recipe["gyroscope"])
     end
     if gyro_recipe then
+      local old_gyro = gyro_recipe.name
       gyro_recipe.name = "gyroscope-micron-tolerance"
       data:extend({gyro_recipe})
       gyro_recipe = data.raw.recipe["gyroscope-micron-tolerance"] -- i don't know if data:extend does a deepcopy. i should refactor my recipe manipulators to allow passing a prototype as well as a name
@@ -113,10 +114,18 @@ if data.raw.item["micron-tolerance-components"] then
           rm.AddIngredient("gyroscope-micron-tolerance", "micron-tolerance-components", 2)
         else if rm.RemoveIngredient("gyroscope-micron-tolerance", "tungsten-plate", 1) then
           rm.AddIngredient("gyroscope-micron-tolerance", "micron-tolerance-components", 1)
-          gyro_recipe.result_count = 5
+          for k, v in pairs(gyro_recipe.results) do
+            if v.name == old_gyro then
+              v.amount = 5
+            end
+          end
         else
           rm.AddIngredient("gyroscope-micron-tolerance", "micron-tolerance-components", 1)
-          gyro_recipe.result_count = 6
+          for k, v in pairs(gyro_recipe.results) do
+            if v.name == old_gyro then
+              v.amount = 6
+            end
+          end
         end end end
         gyro_recipe.icons = {
           {
