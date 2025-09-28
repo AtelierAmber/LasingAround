@@ -119,7 +119,7 @@ data:extend({
   }
 })
 
-if mods["IfNickel"] and (mods["space-exploration"] or parts.nickelExperiment) then
+if mods["IfNickel-Updated"] and (mods["space-exploration"] or parts.nickelExperiment) then
   data:extend({
     {
       type = "item",

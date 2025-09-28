@@ -6,7 +6,7 @@ if mods["BrassTacks"] and settings.startup["brasstacks-experimental-intermediate
 end
 
 parts.brassExperiment = mods["BrassTacks"] and settings.startup["brasstacks-experimental-intermediates"].value
-parts.nickelExperiment = mods["IfNickel"] and settings.startup["ifnickel-experimental-intermediates"].value
+parts.nickelExperiment = mods["IfNickel-Updated"] and settings.startup["ifnickel-experimental-intermediates"].value
 
 function parts.qualityIconPath(mod, icon)
   local prefix = ""
