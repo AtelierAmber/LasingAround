@@ -154,7 +154,7 @@ end
 
 lasermill_recipe("iron-gear-wheel", {helium=1, productivity=true})
 lasermill_recipe("empty-barrel", {helium=2, productivity=true})
-lasermill_recipe("pipe", {helium=mods["BrassTacks"] and 3 or 1, multiply=mods["BrassTacks"] and 2 or 1}) --technically an entity but screw you tbh.
+lasermill_recipe("pipe", {helium=mods["BrassTacks-Updated"] and 3 or 1, multiply=mods["BrassTacks-Updated"] and 2 or 1}) --technically an entity but screw you tbh.
 lasermill_recipe("low-density-structure", {helium=mods["LunarLandings"] and 15 or 10, convert=not mods["LunarLandings"], se_variant="space-crafting", se_tooltip_entity="se-space-assembling-machine", unlock=mods["LunarLandings"] and "laser-mill" or "se-space-assembling", icon_offset = {data.raw.item["nanotubes"] and 8 or -8, -8}})
 
 lasermill_recipe("uranium-fuel-cell", {helium=50, productivity=true, unlock="uranium-processing"})

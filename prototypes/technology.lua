@@ -475,7 +475,7 @@ if mods["LunarLandings"] then
   })
 end
 
-if mods["BrassTacks"] then
+if mods["BrassTacks-Updated"] then
   if parts.brassExperiment then
     tf.addPrereq("laser-mill", "mechanical-engineering-2")
   else if not mods["Krastorio2"] then
