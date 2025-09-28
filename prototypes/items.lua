@@ -153,7 +153,7 @@ if mods["IfNickel-Updated"] and (mods["space-exploration"] or parts.nickelExperi
   end
 end
 
-if mods["ThemTharHills"] and (data.raw.item["gyroscope"] or data.raw.item["gyro"]) then
+if mods["ThemTharHills-Updated"] and (data.raw.item["gyroscope"] or data.raw.item["gyro"]) then
   data:extend({
     {
      type = "item",

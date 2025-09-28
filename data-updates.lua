@@ -21,7 +21,7 @@ if not rm.CheckIngredient("basic-oil-processing", "water") then
 end
 
 tf.addRecipeUnlock("laser", "empty-amplifier-tube")
-if mods["bzgold"] and not (mods["ThemTharHills"] or mods["space-exploration"]) then
+if mods["bzgold"] and not (mods["ThemTharHills-Updated"] or mods["space-exploration"]) then
   tf.addPrereq("laser", "gold-processing")
 end
 
@@ -56,7 +56,7 @@ else
   end
 end
 
-if mods["ThemTharHills"] then
+if mods["ThemTharHills-Updated"] then
   tf.removePrereq("laser", "high-voltage-equipment")
   tf.addPrereq("carbon-dioxide-laser", "high-voltage-equipment")
 end

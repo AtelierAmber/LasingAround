@@ -1,8 +1,8 @@
 local parts = require("variable-parts")
 local rm = require("recipe-modify")
 
-local early_acid = data.raw.fluid["nitric-acid"] and (mods["ThemTharHills"] or mods["BrimStuff"])
-local ic_in_scanner = mods["ThemTharHills"] and not mods["space-exploration"]
+local early_acid = data.raw.fluid["nitric-acid"] and (mods["ThemTharHills-Updated"] or mods["BrimStuff-Updated"])
+local ic_in_scanner = mods["ThemTharHills-Updated"] and not mods["space-exploration"]
 
 local gubbins_allowed = settings.startup["lasingaround-allow-gubbins-in-mill"].value
 local circuits_allowed = settings.startup["lasingaround-allow-circuits-in-mill"].value
@@ -99,7 +99,7 @@ data:extend({
     results = {{type="fluid", name="filtered-oil", amount=100, catalyst_amount=100}, {type="fluid", name="helium", amount=helium_yield * 3}, {type="item", name="spectroscope", amount=1, probability=0.99, catalyst_amount=1}, {type="fluid", name="crude-oil", amount=5, catalyst_amount=5}},
     allow_decomposition = false
   },
-  (mods["bzgold"] and not (mods["space-exploration"] or mods["ThemTharHills"])) and {
+  (mods["bzgold"] and not (mods["space-exploration"] or mods["ThemTharHills-Updated"])) and {
     type = "recipe",
     name = "empty-amplifier-tube",
     category = "advanced-crafting",

@@ -1,7 +1,7 @@
 local parts = require("variable-parts")
 local tf = require("techfuncs")
 
-local ic_in_scanner = mods["ThemTharHills"] and not mods["space-exploration"]
+local ic_in_scanner = mods["ThemTharHills-Updated"] and not mods["space-exploration"]
 
 data:extend({
   {

@@ -19,7 +19,7 @@ remote.add_interface("LasingAround-Milestones", {
     milestones_preset_addons = function()
         return {
             ["Lasing Around"] = {
-                required_mods = {"LasingAround"},
+                required_mods = {"LasingAround-Updated"},
                 milestones = {
                     {type="group", name="Resources"},
                     {type="fluid",  name="helium", quantity=1},
