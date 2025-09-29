@@ -103,10 +103,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "scanner"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "stack-filter-inserter"
       }
     },
     prerequisites = tf.compilePrereqs{"helium-laser", ic_in_scanner and "processing-unit" or nil},
