@@ -65,8 +65,8 @@ local lasermill = {
       pipe_connections = {{ type="output", position = {0, 2} }},
       secondary_draw_orders = { north = -1, east = -1, west = -1 }
     },
-    off_when_no_fluid_recipe = true
   },
+  fluid_boxes_off_when_no_fluid_recipe = true,
   corpse = "laser-mill-remnants",
   dying_explosion = "assembling-machine-3-explosion",
   damaged_trigger_effect = data.raw["assembling-machine"]["assembling-machine-3"].damaged_trigger_effect,
@@ -82,17 +82,6 @@ local lasermill = {
           line_length = 15,
           shift = util.by_pixel(0, -28),
           animation_speed = 0.175,
-          hr_version = {
-            filename = "__LasingAround-Updated__/graphics/entity/table_hot_hr.png",
-            priority = "high",
-            width = 192,
-            height = 176,
-            frame_count = 15,
-            line_length = 15,
-            scale = 0.5,
-            shift = util.by_pixel(0, -28),
-            animation_speed = 0.175,
-          }
         },
         {
           filename = "__LasingAround-Updated__/graphics/entity/beams.png",
@@ -103,17 +92,6 @@ local lasermill = {
           frame_count = 15,
           line_length = 15,
           shift = util.by_pixel(0, -12),
-          hr_version = {
-            filename = "__LasingAround-Updated__/graphics/entity/beams_hr.png",
-            priority = "high",
-            draw_as_glow = true,
-            width = 192,
-            height = 240,
-            frame_count = 15,
-            line_length = 15,
-            scale=0.5,
-            shift = util.by_pixel(0, -12),
-          }
         },
         {
           filename = "__LasingAround-Updated__/graphics/entity/box.png",
@@ -123,16 +101,6 @@ local lasermill = {
           frame_count = 15,
           line_length = 15,
           shift = util.by_pixel(0, -12),
-          hr_version = {
-              filename = "__LasingAround-Updated__/graphics/entity/box_hr.png",
-              priority = "high",
-              width = 192,
-              height = 240,
-              frame_count = 15,
-              line_length = 15,
-              scale=0.5,
-              shift = util.by_pixel(0, -12),
-          }
         },
         {
           filename = "__LasingAround-Updated__/graphics/entity/glow.png",
@@ -143,17 +111,6 @@ local lasermill = {
           line_length = 15,
           draw_as_light = true,
           shift = util.by_pixel(0, -12),
-          hr_version = {
-              filename = "__LasingAround-Updated__/graphics/entity/glow_hr.png",
-              priority = "high",
-              width = 240,
-              height = 240,
-              frame_count = 15,
-              line_length = 15,
-              scale=0.5,
-              draw_as_light = true,
-              shift = util.by_pixel(0, -12),
-          }
         }
       }
     }}
@@ -279,17 +236,7 @@ data:extend({
       width = 96,
       height = 96,
       frame_count = 1,
-      line_length = 1,
-      hr_version = {
-        direction_count = 1,
-        filename = "__LasingAround-Updated__/graphics/entity/laser_mill_remnant_hr.png",
-        priority = "high",
-        width = 192,
-        height = 192,
-        frame_count = 1,
-        line_length = 1,
-        scale = 0.5
-      }
+      line_length = 1
     }
   }
 })
