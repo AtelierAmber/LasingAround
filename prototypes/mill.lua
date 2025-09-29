@@ -35,7 +35,7 @@ local lasermill = {
   {
     type = "electric",
     usage_priority = "secondary-input",
-    emissions_per_minute = 1
+    emissions_per_minute = {pollution = 1}
   },
   energy_usage = "850kW",
   module_specification =
@@ -53,8 +53,9 @@ local lasermill = {
       pipe_covers = pipecoverspictures(),
       base_area = 10,
       base_level = -1,
-      pipe_connections = {{ type="input", position = {0, -2} }},
-      secondary_draw_orders = { north = -1, east = -1, west = -1 }
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.north, position = {0, -1.2} }},
+      secondary_draw_orders = { north = -1, east = -1, west = -1 },
+      volume = 1000,
     },
     {
       production_type = "output",
@@ -62,8 +63,9 @@ local lasermill = {
       pipe_covers = pipecoverspictures(),
       base_area = 10,
       base_level = 1,
-      pipe_connections = {{ type="output", position = {0, 2} }},
-      secondary_draw_orders = { north = -1, east = -1, west = -1 }
+      pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {0, 1.2} }},
+      secondary_draw_orders = { north = -1, east = -1, west = -1 },
+      volume = 1000,
     },
   },
   fluid_boxes_off_when_no_fluid_recipe = true,
