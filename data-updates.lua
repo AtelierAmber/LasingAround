@@ -25,15 +25,6 @@ if mods["bzgold"] and not (mods["ThemTharHills-Updated"] or mods["space-explorat
   tf.addPrereq("laser", "gold-processing")
 end
 
-tf.removeRecipeUnlock("stack-inserter", "stack-filter-inserter")
-rm.RemoveIngredient("stack-filter-inserter", "electronic-circuit", 99999)
-rm.AddIngredient("stack-filter-inserter", "scanner", 1)
-if data.raw.technology["stack-filter-inserter"] then
-  tf.addSciencePack("stack-filter-inserter", "chemical-science-pack")
-  --tf.removeSciencePack("stack-filter-inserter", "basic-tech-card")
-  tf.addPrereq("stack-filter-inserter", "scanner")
-end
-
 if not mods["Krastorio2"] then
   tf.addPrereq("logistics-3", "scanner")
   rm.ReplaceProportional("express-splitter", "advanced-circuit", "scanner", 0.2)
@@ -117,7 +108,7 @@ rm.AddIngredient("beacon", "helium-laser", 5)
 
 tf.addPrereq("laser-turret", "carbon-dioxide-laser")
 tf.removePrereq("laser-turret", "laser")
-rm.RemoveIngredient("laser-turret", "glass", 99999)
+rm.RemoveIngredient("laser-turret", mods["Krastorio2"] and "kr-glass" or "glass", 99999)
 rm.RemoveIngredient("laser-turret", "bismuth-glass", 99999)
 rm.RemoveIngredient("laser-turret", "diamond", 99999)
 rm.RemoveIngredient("laser-turret", "ti-sapphire", 99999)

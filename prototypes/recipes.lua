@@ -106,7 +106,7 @@ data:extend({
     category = "advanced-crafting",
     enabled = false,
     energy_required = 50,
-    ingredients = tf.compilePrereqs{{type="item", name="gold-ingot", 1}, parts.preferred({"ll-silica", "bismuth-glass", "glass", "quartz", "silica", "tin-plate", "iron-plate"}, {40, 20, 20, 10, 50, 20, 10}), 
+    ingredients = tf.compilePrereqs{{type="item", name="gold-ingot", 1}, parts.preferred({"ll-silica", "bismuth-glass", "kr-glass", "quartz", "silica", "tin-plate", "iron-plate"}, {40, 20, 20, 10, 50, 20, 10}), 
       parts.preferred({"silver-plate", "copper-plate"}, {10, 10}), parts.optionalIngredient("tungsten-plate", 10)},
     results = {{type="item", name="empty-amplifier-tube",amount=10}},
     lasermill = {
@@ -121,7 +121,7 @@ data:extend({
     enabled = false,
     energy_required = 5,
     ingredients = tf.compilePrereqs{parts.preferred({"gold-plate", "fi_materials_gold", "silver-wire", "tinned-cable", "copper-cable"}, {1, 1, 2, 2, 2}), 
-      parts.preferred({"ll-silica", "bismuth-glass", "glass", "quartz", "silica", "tin-plate", "iron-plate"}, {4, 2, 2, 1, 5, 2, 1}), parts.preferred({"silver-plate", "copper-plate"}, {1, 1}), 
+      parts.preferred({"ll-silica", "bismuth-glass", "kr-glass", "quartz", "silica", "tin-plate", "iron-plate"}, {4, 2, 2, 1, 5, 2, 1}), parts.preferred({"silver-plate", "copper-plate"}, {1, 1}), 
         parts.optionalIngredient("tungsten-plate", 1)},
     results = {{type="item", name="empty-amplifier-tube", amount=1}},
     lasermill = {
@@ -159,7 +159,7 @@ data:extend({
     enabled = false,
     energy_required = 3,
     ingredients = tf.compilePrereqs{{type="item", name="helium-laser", amount=1}, ic_in_scanner and {type="item", name="integrated-circuit", amount=5} or {type="item", name="electronic-circuit", amount=1}, 
-      {type="item", name="advanced-circuit", amount=ic_in_scanner and 1 or 3}, parts.preferred({"glass", "optical-fiber"}, {2, 3})},
+      {type="item", name="advanced-circuit", amount=ic_in_scanner and 1 or 3}, parts.preferred({"kr-glass", "optical-fiber"}, {2, 3})},
     results = {{type="item", name="scanner", amount=1}}
   },
   {
@@ -170,7 +170,7 @@ data:extend({
     enabled = false,
     energy_required = 3,
     ingredients = tf.compilePrereqs{{type="item", name="helium-laser", amount=1}, parts.preferred({"ll-silicon", "silver-plate", "copper-plate"}, {2, 3, 3}), 
-      parts.preferred({"silicon-wafer", "electronic-circuit"}, {1, 1}), parts.preferred({"glass", "ll-silica", "bismuth-glass"}, {1, 2, 1})},
+      parts.preferred({"silicon-wafer", "electronic-circuit"}, {1, 1}), parts.preferred({"kr-glass", "ll-silica", "bismuth-glass"}, {1, 2, 1})},
     results = {{type="item", name="spectroscope", amount=1}}
   },
   {
@@ -182,7 +182,7 @@ data:extend({
     enabled = false,
     ingredients = tf.compilePrereqs{{type="item", name="assembling-machine-2", amount=1}, {type="item", name="carbon-dioxide-laser", amount=2}, parts.preferred({"complex-joint", "steel-gear-wheel", "bearing", "iron-gear-wheel"}, 
       {2, 4, 4, 10}), parts.preferred({"hv-power-regulator", "advanced-circuit"}, {5, 25}), parts.preferred({"se-heat-shielding", "tungsten-plate"}, {1, 10}), 
-      parts.optionalIngredient("cooling-fan", 10), parts.preferred({"bismuth-glass", "glass"}, {10, 10})}
+      parts.optionalIngredient("cooling-fan", 10), parts.preferred({"bismuth-glass", "kr-glass"}, {10, 10})}
   }
 })
 
@@ -453,7 +453,7 @@ if data.raw.item["micron-tolerance-components"] then
         enabled = false,
         energy_required = 3,
         ingredients = tf.compilePrereqs{{type="item", name="helium-laser", amount=1}, parts.preferred({"silver-plate", "copper-plate"}, {1, 1}), 
-          parts.preferred({"silicon-wafer", "electronic-circuit"}, {1, 1}), parts.preferred({"glass", "bismuth-glass"}, {1, 1}), {type="item", name="micron-tolerance-components", amount=1}},
+          parts.preferred({"silicon-wafer", "electronic-circuit"}, {1, 1}), parts.preferred({"kr-glass", "bismuth-glass"}, {1, 1}), {type="item", name="micron-tolerance-components", amount=1}},
         results = {{type="item", name="spectroscope", amount=1}}
       },
       {
@@ -462,7 +462,7 @@ if data.raw.item["micron-tolerance-components"] then
         category = "crafting",
         enabled = false,
         energy_required = 10,
-        ingredients = tf.compilePrereqs{{type="item", name="micron-tolerance-components", amount=5}, {type="item", name="glass", amount=10}, 
+        ingredients = tf.compilePrereqs{{type="item", name="micron-tolerance-components", amount=5}, {type="item", name="kr-glass", amount=10}, 
           {type="item", name="spectroscope", amount=1}, {type="item", name="scanner", amount=1}, 
           parts.preferred({"gyroscope", "gyro"}, {1, 1}), parts.optionalIngredient(mods["Krastorio2"] and "kr-nitric-acid" or "nitric-acid", 25)},
         results = {{type="item", name="laboratory-gear",amount=5}}
