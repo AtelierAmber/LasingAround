@@ -109,7 +109,7 @@ data:extend({
         recipe = "stack-filter-inserter"
       }
     },
-    prerequisites = tf.compilePrereqs{"helium-laser", ic_in_scanner and "advanced-electronics-2" or nil},
+    prerequisites = tf.compilePrereqs{"helium-laser", ic_in_scanner and "processing-unit" or nil},
     unit = {
       count = 100,
       ingredients = {

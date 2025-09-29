@@ -171,7 +171,7 @@ lasermill_recipe("electronic-circuit", {helium=mods["bztin"] and 2 or 1, product
 lasermill_recipe("advanced-circuit", {helium=rm.CheckIngredient("advanced-circuit", "silicon-wafer") and 15 or 5, productivity=true, type="circuit"})
 if not rm.CheckIngredient("processing-unit", "sulfuric-acid") then
   --this is the bzgold blue circuit which is quite cheap
-  lasermill_recipe("processing-unit", {helium=10, productivity=true, type="circuit", unlock="advanced-electronics-2"})
+  lasermill_recipe("processing-unit", {helium=10, productivity=true, type="circuit", unlock="processing-unit"})
 end
 
 lasermill_recipe("iron-chest", {helium=4, type="entity"})
@@ -257,13 +257,13 @@ require("compat.bz")
 require("compat.248k")
 
 data.raw.item["filtered-oil-barrel"].ib_badge = "FO"
-data.raw.recipe["fill-filtered-oil-barrel"].ib_badge = "FO"
-data.raw.recipe["fill-filtered-oil-barrel"].ib_corner = "left-bottom"
+data.raw.recipe["filtered-oil-barrel"].ib_badge = "FO"
+data.raw.recipe["filtered-oil-barrel"].ib_corner = "left-bottom"
 data.raw.recipe["empty-filtered-oil-barrel"].ib_badge = "FO"
 data.raw.recipe["empty-filtered-oil-barrel"].ib_corner = "left-bottom"
 
 data.raw.item["helium-barrel"].ib_badge = "He"
-data.raw.recipe["fill-helium-barrel"].ib_badge = "He"
-data.raw.recipe["fill-helium-barrel"].ib_corner = "left-bottom"
+data.raw.recipe["helium-barrel"].ib_badge = "He"
+data.raw.recipe["helium-barrel"].ib_corner = "left-bottom"
 data.raw.recipe["empty-helium-barrel"].ib_badge = "He"
 data.raw.recipe["empty-helium-barrel"].ib_corner = "left-bottom"

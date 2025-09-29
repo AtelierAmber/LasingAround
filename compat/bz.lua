@@ -29,7 +29,7 @@ if mods["bzgold"] then
   lasermill_recipe("mlcc", {helium=2, type="gubbins", unlock="advanced-capacitors", productivity=true})
   lasermill_recipe("temperature-sensor", {helium=2, type="gubbins", unlock="temperature-regulation", productivity=true})
 
-  lasermill_recipe("mainboard", {helium=60, type="circuit", unlock="advanced-electronics-2"})
+  lasermill_recipe("mainboard", {helium=60, type="circuit", unlock="processing-unit"})
   
   if data.raw.item.mlcc and data.raw.item.tracker and not mods["space-exploration"] then
     rm.AddIngredient("tracker", "mlcc", 1, 1)

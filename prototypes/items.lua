@@ -28,7 +28,8 @@ data:extend({
     default_temperature = 25,
     max_temperature = 25,
     base_color = {r=0.75, g=1, b=0.9, a=1},
-    flow_color = {r=1, g=1, b=1, a=1}
+    flow_color = {r=1, g=1, b=1, a=1},
+    auto_barrel = true
   },
   {
     type = "fluid",
@@ -40,7 +41,8 @@ data:extend({
     default_temperature = 25,
     max_temperature = 25,
     base_color = data.raw.fluid["crude-oil"].base_color,
-    flow_color = data.raw.fluid["crude-oil"].flow_color
+    flow_color = data.raw.fluid["crude-oil"].flow_color,
+    auto_barrel = true
   },
   {
     type = "item",
