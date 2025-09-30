@@ -142,13 +142,13 @@ if data.raw.item["micron-tolerance-components"] then
       end
       tf.addRecipeUnlock("micron-tolerance-instruments", "gyroscope-micron-tolerance")
     else
-      gyro_recipe = deepcopy(data.raw.recipe["rocket-control-unit"])
+      gyro_recipe = deepcopy(data.raw.recipe["processing-unit"])
       gyro_recipe.name = "rocket-control-unit-micron-tolerance"
       data:extend({gyro_recipe})
       gyro_recipe = data.raw.recipe["rocket-control-unit-micron-tolerance"]
       gyro_recipe.icons = {
         {
-          icon = "__base__/graphics/icons/rocket-control-unit.png",
+          icon = "__LasingAround-Updated__/graphics/icons/rocket-control-unit.png",
           icon_size = 64,
           icon_mipmaps = 4
         },

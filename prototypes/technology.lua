@@ -244,45 +244,45 @@ if data.raw.item["tracker"] then
     }
   })
   if mods["LunarLandings"] then
-    data:extend({
-      {
-            type = "technology",
-            name = "advanced-rocket-navigation",
-            icons = {
-              {
-                icon = "__base__/graphics/technology/rocket-control-unit.png",
-                icon_size = 256
-              },
-              {
-                icon = "__LasingAround-Updated__/graphics/icons/tracker.png",
-                icon_size = 64,
-                shift = {-64, -64},
-                scale = 2
-              }
-             },
-            effects =
-            {
-              {
-                type = "unlock-recipe",
-                recipe = "advanced-rocket-control-unit"
-              }
-            },
-            prerequisites = {"ll-quantum-science-pack"},
-            unit = {
-              count = 200,
-              ingredients = {
-                { "automation-science-pack", 1 },
-                { "logistic-science-pack", 1 },
-                { "chemical-science-pack", 1 },
-                { "production-science-pack", 1 },
-                { "utility-science-pack", 1 },
-                { "ll-space-science-pack", 1 },
-                { "ll-quantum-science-pack", 1 }
-              },
-              time = 60,
-            }
-      }
-    })
+    -- data:extend({
+    --   {
+    --         type = "technology",
+    --         name = "advanced-rocket-navigation",
+    --         icons = {
+    --           {
+    --             icon = "__LasingAround-Updated__/graphics/icons/rocket-control-unit.png",
+    --             icon_size = 256
+    --           },
+    --           {
+    --             icon = "__LasingAround-Updated__/graphics/icons/tracker.png",
+    --             icon_size = 64,
+    --             shift = {-64, -64},
+    --             scale = 2
+    --           }
+    --          },
+    --         effects =
+    --         {
+    --           {
+    --             type = "unlock-recipe",
+    --             recipe = "advanced-rocket-control-unit"
+    --           }
+    --         },
+    --         prerequisites = {"ll-quantum-science-pack"},
+    --         unit = {
+    --           count = 200,
+    --           ingredients = {
+    --             { "automation-science-pack", 1 },
+    --             { "logistic-science-pack", 1 },
+    --             { "chemical-science-pack", 1 },
+    --             { "production-science-pack", 1 },
+    --             { "utility-science-pack", 1 },
+    --             { "ll-space-science-pack", 1 },
+    --             { "ll-quantum-science-pack", 1 }
+    --           },
+    --           time = 60,
+    --         }
+    --   }
+    -- })
   end
 end
 

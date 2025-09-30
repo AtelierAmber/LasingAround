@@ -53,16 +53,6 @@ if mods["ThemTharHills-Updated"] then
 end
 
 if data.raw.item["tracker"] then
-  if not mods["LunarLandings"] then
-    tf.addPrereq("rocket-control-unit", "tracking-systems")
-    rm.RemoveIngredient("rocket-control-unit", "gyro", 99999)
-    rm.RemoveIngredient("rocket-control-unit", "gyroscope", 99999)
-    rm.RemoveIngredient("rocket-control-unit", "transceiver", 99999)
-    if mods["space-exploration"] then
-      rm.RemoveIngredient("rocket-control-unit", "graphene", 99999)
-    end
-    rm.AddIngredient("rocket-control-unit", "tracker", 1)
-  end
 
   tf.addPrereq("artillery", "tracking-systems")
   rm.RemoveIngredient("artillery-shell", "transceiver", 99999)
