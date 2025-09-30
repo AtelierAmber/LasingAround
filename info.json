@@ -1,9 +1,9 @@
 {
   "name": "LasingAround-Updated",
-  "version": "1.0.10",
+  "version": "2.0.0",
   "title": "Lasing Around 2.0",
-  "author": "planetfall",
-  "homepage": "",
+  "author": "ashier",
+  "homepage": "https://github.com/AtelierAmber/LasingAround-Updated",
   "description": "Updated for 2.0. Adds helium and laser-related intermediates, and a side-grade to assembling machines.",
   "factorio_version": "2.0",
   "dependencies": ["base >= 2.0", "? BrassTacks-Updated", "? IfNickel-Updated", "? ThemTharHills-Updated", "? BrimStuff-Updated", "? bzgold", "? bzaluminum", "? bztin", "? bzsilicon", "? bzchlorine", 
