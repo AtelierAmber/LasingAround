@@ -115,11 +115,11 @@ if mods["FluidMustFlow"] then
     end
   end
 
-  lasermill_recipe("duct-small", {helium=2*cost, type="entity", unlock="Ducts"})
-  lasermill_recipe("duct", {helium=4*cost, type="entity", unlock="Ducts"})
-  lasermill_recipe("duct-long", {helium=8*cost, type="entity", unlock="Ducts"})
-  lasermill_recipe("duct-t-junction", {helium=4*cost, type="entity", unlock="Ducts"})
-  lasermill_recipe("duct-curve", {helium=4*cost, type="entity", unlock="Ducts"})
-  lasermill_recipe("duct-cross", {helium=4*cost, type="entity", unlock="Ducts"})
-  lasermill_recipe("duct-underground", {helium=30*cost, type="entity", unlock="Ducts"})
+  lasermill_recipe("duct-small", {helium=2*cost, type="entity", unlock="ducts"})
+  lasermill_recipe("duct", {helium=4*cost, type="entity", unlock="ducts"})
+  lasermill_recipe("duct-long", {helium=8*cost, type="entity", unlock="ducts"})
+  lasermill_recipe("duct-t-junction", {helium=4*cost, type="entity", unlock="ducts"})
+  lasermill_recipe("duct-curve", {helium=4*cost, type="entity", unlock="ducts"})
+  lasermill_recipe("duct-cross", {helium=4*cost, type="entity", unlock="ducts"})
+  lasermill_recipe("duct-underground", {helium=30*cost, type="entity", unlock="ducts"})
 end
