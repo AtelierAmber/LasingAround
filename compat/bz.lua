@@ -9,8 +9,8 @@ local function lasermill_recipe(recipe, lasdata)
 end
 
 if mods["bzcarbon"] then
-  rm.RemoveIngredient("low-density-structure", "diamond", 99999, 99999)
-  rm.RemoveProduct("low-density-structure", "diamond", 99999, 99999)
+  rm.RemoveIngredient("low-density-structure", "diamond", 99999)
+  rm.RemoveProduct("low-density-structure", "diamond", 99999)
   tf.removePrereq("low-density-structure", "diamond-processing")
 
   tf.removePrereq("laser", "diamond-processing")
