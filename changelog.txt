@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 2025-09-30
+  Bugfixes:
+    - Fixed Fluids Must Flow & Flow Control incompatibility
+    - Fixed conditional crash when tracker was enabled and and skyseeker wasn't?
+---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 2025-09-29
   Changes:
