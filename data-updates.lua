@@ -67,8 +67,9 @@ if data.raw.item["tracker"] then
     rm.RemoveIngredient("artillery-wagon", "gyro", 99999)
     rm.AddIngredient("artillery-turret", "tracker", 10)
     rm.AddIngredient("artillery-wagon", "tracker", 10)
+  else
+    tf.addPrereq("skyseeker-armature", "tracking-systems")
   end
-  tf.addPrereq("skyseeker-armature", "tracking-systems")
   if not mods["aai-containers"] then
     tf.addPrereq("logistic-system", "tracking-systems")
 
