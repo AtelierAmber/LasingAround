@@ -9,7 +9,7 @@ local function lasermill_recipe(recipe, lasdata)
 end
 
 if mods["Krastorio2"] then
-  rm.ReplaceProportional("biusart-lab", "advanced-circuit", "scanner", 0.5)
+  rm.ReplaceProportional("kr-advanced-lab", "advanced-circuit", "scanner", 0.5)
   tf.addPrereq("kr-advanced-lab", "scanner")
 
   rm.AddIngredient("kr-fusion-reactor", "carbon-dioxide-laser", 100)
@@ -22,14 +22,14 @@ if mods["Krastorio2"] then
   rm.AddIngredient("kr-singularity-lab", "spectroscope", 100)
   rm.AddIngredient("kr-singularity-lab", "scanner", 100)
 
-  lasermill_recipe("iron-beam", {helium=1, productivity=true})
-  lasermill_recipe("steel-beam", {helium=3, productivity=true})
-  lasermill_recipe("steel-gear-wheel", {helium=6, productivity=true})
-  lasermill_recipe("imersium-beam", {convert=true, helium=6, se_variant="space-crafting", se_tooltip_entity="se-space-assembling-machine", unlock="kr-imersium-processing"})
-  lasermill_recipe("imersium-gear-wheel", {convert=true, helium=12, se_variant="space-crafting", se_tooltip_entity="se-space-assembling-machine", unlock="kr-imersium-processing"})
+  lasermill_recipe("kr-iron-beam", {helium=1, productivity=true})
+  lasermill_recipe("kr-steel-beam", {helium=3, productivity=true})
+  lasermill_recipe("kr-steel-gear-wheel", {helium=6, productivity=true})
+  lasermill_recipe("kr-imersium-beam", {convert=true, helium=6, se_variant="space-crafting", se_tooltip_entity="se-space-assembling-machine", unlock="kr-imersium-processing"})
+  lasermill_recipe("kr-imersium-gear-wheel", {convert=true, helium=12, se_variant="space-crafting", se_tooltip_entity="se-space-assembling-machine", unlock="kr-imersium-processing"})
 
-  lasermill_recipe("blank-tech-card", {helium=1, type="circuit", productivity=true})
-  lasermill_recipe("blank-tech-card-silver", {helium=1, type="circuit", productivity=true})
+  lasermill_recipe("kr-blank-tech-card", {helium=1, type="circuit", productivity=true})
+  lasermill_recipe("kr-blank-tech-card-silver", {helium=1, type="circuit", productivity=true})
 
   lasermill_recipe("kr-steel-pipe", {helium=8})
   lasermill_recipe("kr-steel-pipe-to-ground", {helium=25, type="entity"})
@@ -84,9 +84,9 @@ if mods["Krastorio2"] then
   rm.RemoveIngredient("kr-laser-artillery-turret", "diamond", 99999)
   rm.RemoveIngredient("kr-laser-artillery-turret", "ti-sapphire", 99999)
 
-  rm.AddIngredient("advanced-tech-card", "carbon-dioxide-laser", 5)
+  rm.AddIngredient("kr-advanced-tech-card", "carbon-dioxide-laser", 5)
 
-  rm.AddIngredient("matter-stabilizer", "spectroscope", 1)
+  rm.AddIngredient("kr-matter-stabilizer", "spectroscope", 1)
 
   if data.raw.item["micron-tolerance-components"] then
     if parts.brassExperiment then
