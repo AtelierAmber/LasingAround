@@ -17,7 +17,7 @@ if mods["248k"] then
 
   rm.AddIngredient("fu_laser_recipe", "spectroscope", 20)
   rm.AddIngredient("fu_laser_card_recipe", "carbon-dioxide-laser", 1)
-  rm.AddProductRaw("fu_laser_card_recipe", {type="item", name="carbon-dioxide-laser", amount=1, probability=0.75, catalyst_amount=1})
+  rm.AddProductRaw("fu_laser_card_recipe", {type="item", name="carbon-dioxide-laser", amount=1, probability=0.75, ignored_by_productivity=1, ignored_by_stats=1})
 
   if data.raw["assembling-machine"]["fu_laser_entity"] then
     data.raw["assembling-machine"]["fu_laser_entity"].ingredient_count = nil
