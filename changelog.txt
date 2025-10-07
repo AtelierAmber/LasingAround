@@ -1,7 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
-Date: ????
+Date: 2025-10-07
   Changes:
+    - More K2 compatibility fixes
+    - Fixes to lasermill prototype definition
+      - Images and fluidboxes
+    - Fixed catalyst recipes using old catalyst definition
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 2025-09-30
