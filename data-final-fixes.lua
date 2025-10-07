@@ -1,5 +1,5 @@
 local deepcopy = require("util").table.deepcopy
-local parts = require("BrassTacks-Updated.optionals")
+local parts = require("variable-parts")
 local rm = require("recipe-modify")
 local tf = require("techfuncs")
 
