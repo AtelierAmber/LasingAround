@@ -3,20 +3,12 @@ local util = require("util")
 local lasermill_pipes = assembler2pipepictures()
 lasermill_pipes.south =
 {
-  filename = "__LasingAround-Updated__/graphics/entity/pipe_connector.png",
+  filename = "__LasingAround-Updated__/graphics/entity/pipe_connector_hr.png",
   priority = "extra-high",
-  width = 44,
-  height = 31,
-  shift = util.by_pixel(0, -31.5),
-  hr_version =
-  {
-    filename = "__LasingAround-Updated__/graphics/entity/pipe_connector_hr.png",
-    priority = "extra-high",
-    width = 88,
-    height = 61,
-    shift = util.by_pixel(0, -31.25),
-    scale = 0.5
-  }
+  width = 88,
+  height = 61,
+  shift = util.by_pixel(0, -31.25),
+  scale = 0.5
 }
 
 local lasermill = {
@@ -51,9 +43,7 @@ local lasermill = {
       production_type = "input",
       pipe_picture = lasermill_pipes,
       pipe_covers = pipecoverspictures(),
-      base_area = 10,
-      base_level = -1,
-      pipe_connections = {{ flow_direction="input", direction = defines.direction.north, position = {0, -1.2} }},
+      pipe_connections = {{ flow_direction="input", direction = defines.direction.north, position = {0, -1} }},
       secondary_draw_orders = { north = -1, east = -1, west = -1 },
       volume = 1000,
     },
@@ -61,9 +51,7 @@ local lasermill = {
       production_type = "output",
       pipe_picture = lasermill_pipes,
       pipe_covers = pipecoverspictures(),
-      base_area = 10,
-      base_level = 1,
-      pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {0, 1.2} }},
+      pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {0, 1} }},
       secondary_draw_orders = { north = -1, east = -1, west = -1 },
       volume = 1000,
     },
@@ -72,65 +60,55 @@ local lasermill = {
   corpse = "laser-mill-remnants",
   dying_explosion = "assembling-machine-3-explosion",
   damaged_trigger_effect = data.raw["assembling-machine"]["assembling-machine-3"].damaged_trigger_effect,
-  working_visualisations = {{
+  graphics_set = {
+    working_visualisations = {{
+      animation = {
+        layers = {
+          {
+            filename = "__LasingAround-Updated__/graphics/entity/table_hot.png",
+            priority = "high",
+            width = 96,
+            height = 88,
+            frame_count = 15,
+            line_length = 15,
+            shift = util.by_pixel(0, -28),
+            animation_speed = 0.175,
+          },
+          {
+            filename = "__LasingAround-Updated__/graphics/entity/beams.png",
+            priority = "high",
+            draw_as_glow = true,
+            width = 96,
+            height = 120,
+            frame_count = 15,
+            line_length = 15,
+            shift = util.by_pixel(0, -12),
+          },
+          {
+            filename = "__LasingAround-Updated__/graphics/entity/box.png",
+            priority = "high",
+            width = 96,
+            height = 120,
+            frame_count = 15,
+            line_length = 15,
+            shift = util.by_pixel(0, -12),
+          },
+          {
+            filename = "__LasingAround-Updated__/graphics/entity/glow.png",
+            priority = "high",
+            width = 120,
+            height = 120,
+            frame_count = 15,
+            line_length = 15,
+            draw_as_light = true,
+            shift = util.by_pixel(0, -12),
+          }
+        }
+      }}
+    },
     animation = {
       layers = {
         {
-          filename = "__LasingAround-Updated__/graphics/entity/table_hot.png",
-          priority = "high",
-          width = 96,
-          height = 88,
-          frame_count = 15,
-          line_length = 15,
-          shift = util.by_pixel(0, -28),
-          animation_speed = 0.175,
-        },
-        {
-          filename = "__LasingAround-Updated__/graphics/entity/beams.png",
-          priority = "high",
-          draw_as_glow = true,
-          width = 96,
-          height = 120,
-          frame_count = 15,
-          line_length = 15,
-          shift = util.by_pixel(0, -12),
-        },
-        {
-          filename = "__LasingAround-Updated__/graphics/entity/box.png",
-          priority = "high",
-          width = 96,
-          height = 120,
-          frame_count = 15,
-          line_length = 15,
-          shift = util.by_pixel(0, -12),
-        },
-        {
-          filename = "__LasingAround-Updated__/graphics/entity/glow.png",
-          priority = "high",
-          width = 120,
-          height = 120,
-          frame_count = 15,
-          line_length = 15,
-          draw_as_light = true,
-          shift = util.by_pixel(0, -12),
-        }
-      }
-    }}
-  },
-  animation = {
-    layers = {
-      {
-        filename = "__LasingAround-Updated__/graphics/entity/shadow.png",
-        priority = "high",
-        width = 160,
-        height = 96,
-        frame_count = 1,
-        line_length = 1,
-        repeat_count = 15,
-        shift = util.by_pixel(32, 0),
-        animation_speed = 0.175,
-        draw_as_shadow = true,
-        hr_version = {
           filename = "__LasingAround-Updated__/graphics/entity/shadow_hr.png",
           priority = "high",
           width = 320,
@@ -142,18 +120,8 @@ local lasermill = {
           shift = util.by_pixel(32, 0),
           animation_speed = 0.175,
           draw_as_shadow = true,
-        }
-      },
-      {
-        filename = "__LasingAround-Updated__/graphics/entity/table.png",
-        priority = "high",
-        width = 96,
-        height = 120,
-        frame_count = 15,
-        line_length = 15,
-        shift = util.by_pixel(0, -12),
-        animation_speed = 0.175,
-        hr_version = {
+        },
+        {
           filename = "__LasingAround-Updated__/graphics/entity/table_hr.png",
           priority = "high",
           width = 192,
@@ -163,18 +131,8 @@ local lasermill = {
           scale = 0.5,
           shift = util.by_pixel(0, -12),
           animation_speed = 0.175,
-        }
-      },
-      {
-        filename = "__LasingAround-Updated__/graphics/entity/box.png",
-        priority = "high",
-        width = 96,
-        height = 120,
-        frame_count = 15,
-        line_length = 15,
-        shift = util.by_pixel(0, -12),
-        animation_speed = 0.175,
-        hr_version = {
+        },
+        {
           filename = "__LasingAround-Updated__/graphics/entity/box_hr.png",
           priority = "high",
           width = 192,
@@ -186,7 +144,7 @@ local lasermill = {
           animation_speed = 0.175,
         }
       }
-    }
+    },
   },
   working_sound = {
       sound =
