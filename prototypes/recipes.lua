@@ -266,7 +266,7 @@ if mods["bzgas"] then
           enabled = false,
           energy_required = 6,
           ingredients = {{type="fluid", name="gas", amount=50}, {type="fluid", name="steam", amount=10}},
-          results = {{type="fluid", name="hydrogen", amount=200, ignored_by_productivity=200, ignored_by_stats=200}, {type="fluid", name="helium", amount=helium_yield}},
+          results = {{type="fluid", name="kr-hydrogen", amount=200, ignored_by_productivity=200, ignored_by_stats=200}, {type="fluid", name="helium", amount=helium_yield}},
           crafting_machine_tint = {
               primary = {1, 0.85, 0.1, 1},
               secondary = {0.75, 1, 0.9, 1},
@@ -309,7 +309,7 @@ if mods["bzgas"] then
           enabled = false,
           energy_required = 12,
           ingredients = {{type="fluid", name="gas", amount=100}, {type="fluid", name="steam", amount=40}, {type="item", name="spectroscope", amount=1}},
-          results = {{type="fluid", name="hydrogen", amount=400, ignored_by_productivity=400, ignored_by_stats=400}, {type="fluid", name="helium", amount=helium_yield * 3}, {type="item", name="spectroscope", amount=1, probability=0.99, catalyst_amount=1}, {type="fluid", name="gas", amount=5, catalyst_amount=5}},
+          results = {{type="fluid", name="kr-hydrogen", amount=400, ignored_by_productivity=400, ignored_by_stats=400}, {type="fluid", name="helium", amount=helium_yield * 3}, {type="item", name="spectroscope", amount=1, probability=0.99, catalyst_amount=1}, {type="fluid", name="gas", amount=5, catalyst_amount=5}},
           allow_decomposition = false
         }
     })
