@@ -1,6 +1,7 @@
 local rm = require("recipe-modify")
 local tf = require("techfuncs")
 local deepcopy = require("util").table.deepcopy
+local flib_locale = require("__flib__.locale")
 
 if mods["Krastorio2"] and data.raw.recipe["iron-gear-wheel"] then
   --I don't know why Krastorio is only sometimes bulkifying this recipe.
@@ -232,6 +233,7 @@ for name, recipe in pairs(data.raw.recipe) do
           recipe_copy.category = lasdata.se_variant
         else
           recipe_copy.name = name .. "-in-laser-mill"
+          recipe_copy.localised_name = {"?", {recipe_copy.name}, {"", {"entity-name.laser-mill"}, " > ", flib_locale.of(recipe, recipe.name)}}
           recipe_copy.category = "laser-milling"
           new_recipes_helium[recipe_copy.name] = lasdata.helium or 1
           if lasdata.multiply then
@@ -291,6 +293,7 @@ for name, recipe in pairs(data.raw.recipe) do
     end
   end
 end
+
 
 if #new_recipes > 0 then
   data:extend(new_recipes)
