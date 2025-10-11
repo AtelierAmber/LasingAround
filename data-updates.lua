@@ -73,12 +73,12 @@ if data.raw.item["tracker"] then
   if not mods["aai-containers"] then
     tf.addPrereq("logistic-system", "tracking-systems")
 
-    rm.RemoveIngredient("logistic-chest-requester", "advanced-circuit", 1)
-    rm.ReplaceIngredient("logistic-chest-requester", "transceiver", "tracker", 1)
-    rm.RemoveIngredient("logistic-chest-buffer", "advanced-circuit", 1)
-    rm.ReplaceIngredient("logistic-chest-buffer", "transceiver", "tracker", 1)
-    rm.RemoveIngredient("logistic-chest-active-provider", "advanced-circuit", 1)
-    rm.ReplaceIngredient("logistic-chest-active-provider", "transceiver", "tracker", 1)
+    rm.RemoveIngredient("requester-chest", "advanced-circuit", 1)
+    rm.ReplaceIngredient("requester-chest", "transceiver", "tracker", 1)
+    rm.RemoveIngredient("buffer-chest", "advanced-circuit", 1)
+    rm.ReplaceIngredient("buffer-chest", "transceiver", "tracker", 1)
+    rm.RemoveIngredient("active-provider-chest", "advanced-circuit", 1)
+    rm.ReplaceIngredient("active-provider-chest", "transceiver", "tracker", 1)
   end
 
   tf.addPrereq("personal-roboport-mk2-equipment", "tracking-systems")
@@ -103,7 +103,7 @@ rm.RemoveIngredient("laser-turret", mods["Krastorio2"] and "kr-glass" or "glass"
 rm.RemoveIngredient("laser-turret", "bismuth-glass", 99999)
 rm.RemoveIngredient("laser-turret", "diamond", 99999)
 rm.RemoveIngredient("laser-turret", "ti-sapphire", 99999)
-rm.RemoveIngredient("laser-turret", "quartz", 99999)
+rm.RemoveIngredient("laser-turret", "kr-quartz", 99999)
 rm.ReplaceIngredient("laser-turret", "hv-power-regulator", "carbon-dioxide-laser", 1)
 
 tf.removePrereq("distractor", "laser")

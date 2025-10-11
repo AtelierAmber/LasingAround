@@ -106,7 +106,7 @@ data:extend({
     category = "advanced-crafting",
     enabled = false,
     energy_required = 50,
-    ingredients = tf.compilePrereqs{{type="item", name="gold-ingot", 1}, parts.preferred({"ll-silica", "bismuth-glass", mods["Krastorio2"] and "kr-glass" or "glass", "quartz", "silica", "tin-plate", "iron-plate"}, {40, 20, 20, 10, 50, 20, 10}), 
+    ingredients = tf.compilePrereqs{{type="item", name="gold-ingot", 1}, parts.preferred({"ll-silica", "bismuth-glass", mods["Krastorio2"] and "kr-glass" or "glass", "kr-quartz", "silica", "tin-plate", "iron-plate"}, {40, 20, 20, 10, 50, 20, 10}), 
       parts.preferred({"silver-plate", "copper-plate"}, {10, 10}), parts.optionalIngredient("tungsten-plate", 10)},
     results = {{type="item", name="empty-amplifier-tube",amount=10}},
     lasermill = {
@@ -121,7 +121,7 @@ data:extend({
     enabled = false,
     energy_required = 5,
     ingredients = tf.compilePrereqs{parts.preferred({"gold-plate", "fi_materials_gold", "silver-wire", "tinned-cable", "copper-cable"}, {1, 1, 2, 2, 2}), 
-      parts.preferred({"ll-silica", "bismuth-glass", mods["Krastorio2"] and "kr-glass" or "glass", "quartz", "silica", "tin-plate", "iron-plate"}, {4, 2, 2, 1, 5, 2, 1}), parts.preferred({"silver-plate", "copper-plate"}, {1, 1}), 
+      parts.preferred({"ll-silica", "bismuth-glass", mods["Krastorio2"] and "kr-glass" or "glass", "kr-quartz", "silica", "tin-plate", "iron-plate"}, {4, 2, 2, 1, 5, 2, 1}), parts.preferred({"silver-plate", "copper-plate"}, {1, 1}), 
         parts.optionalIngredient("tungsten-plate", 1)},
     results = {{type="item", name="empty-amplifier-tube", amount=1}},
     lasermill = {
@@ -137,7 +137,7 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = tf.compilePrereqs{{type="fluid", name="helium", amount=25}, {type="item", name="empty-amplifier-tube", amount=1}, {type="item", name="electronic-circuit", amount=1}, {type="item", name="battery", amount=1}, 
-      parts.preferred({"optical-fiber", "quartz"}, {1, 1})},
+      parts.preferred({"optical-fiber", "kr-quartz"}, {1, 1})},
     results = {{type="item", name="helium-laser", amount=1}}
   },
   {

@@ -180,7 +180,7 @@ local function remove_extraneous_fluids(recipe)
       incomplete = false
       for k, ing in pairs(recipe.ingredients) do
         if ing.type == "fluid" and ing.name ~= "helium" then
-          recipe.ingredients[k] = nil
+          table.remove(recipe.ingredients, k)
           incomplete = true
           break
         end
