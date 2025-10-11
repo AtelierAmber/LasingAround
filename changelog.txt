@@ -1,7 +1,14 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
-Date: ????
+Date: 2025-10-11
   Changes:
+    - Changed name to Lasing Around Legacy
+    - Added logging for missing recipes.
+  Bugfixes:
+    - Lots of Krastorio 2 fixes
+    - Fixes to some space exploration references
+    - Fixed locale for laser recipes
+      - This required the use of the Factorio Lib mod. If the mod portal doesn't auto download it for you, you will need to download and enable it!!!
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
 Date: 2025-10-07
