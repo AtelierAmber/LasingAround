@@ -2,7 +2,7 @@ local parts = require("variable-parts")
 local tf = require("techfuncs")
 local rm = require("recipe-modify")
 
-if mods["248k"] then
+if mods["248k-Redux"] then
   rm.ReplaceProportional("el_kerosene_recipe", "crude-oil", "filtered-oil", 1)
   rm.ReplaceProportional("el_kerosene_basic_recipe", "crude-oil", "filtered-oil", 1)
 
