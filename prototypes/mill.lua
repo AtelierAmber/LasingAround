@@ -30,11 +30,7 @@ local lasermill = {
     emissions_per_minute = {pollution = 1}
   },
   energy_usage = "850kW",
-  module_specification = {
-    module_slots = 4,
-    module_info_icon_shift = {0, 1.3}
-  },
-  entity_info_icon_shift = {0, 0.5},
+  module_slots = 4,
   effect_receiver = { base_effect = { productivity = 0.1 } },
   allowed_effects = {"consumption", "speed", "productivity", "pollution"},
   fluid_boxes = {
