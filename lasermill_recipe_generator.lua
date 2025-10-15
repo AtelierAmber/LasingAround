@@ -49,36 +49,12 @@ local entities_allowed = settings.startup["lasingaround-allow-entities-in-mill"]
 local hide_duplicates = settings.startup["lasingaround-hide-duplicate-recipes"].value
 
 local function get_main_product(recipe)
-  if recipe.normal then
-    if recipe.normal.main_product then
-      return recipe.normal.main_product
-    end
-    if recipe.normal.results and #recipe.normal.results == 1 then
-      local product = recipe.normal.results[1]
-      return product["name"] or product[1] or "???"
-    end
-    if recipe.normal.result then
-      return recipe.normal.result
-    end
-  end
-  if recipe.expensive then
-    if recipe.expensive.main_product then
-      return recipe.expensive.main_product
-    end
-    if recipe.expensive.results and #recipe.expensive.results == 1 then
-      local product = recipe.expensive.results[1]
-      return product["name"] or product[1] or "???"
-    end
-    if recipe.expensive.result then
-      return recipe.expensive.result
-    end
-  end
   if recipe.main_product then
     return recipe.main_product
   end
   if recipe.results and #recipe.results == 1 then
     local product = recipe.results[1]
-    return product["name"] or product[1] or "???"
+    return product["name"]
   end
   if recipe.result then
     return recipe.result
@@ -282,9 +258,7 @@ for name, recipe in pairs(data.raw.recipe) do
         end
         --techfuncs unlock-adding function requires the recipe to first exist in data.raw, but we are iterating over data.raw as we speak so we cannot add it here
 
-        if lasdata.productivity then
-          table.insert(new_recipes_productivity, recipe_copy.name)
-        end
+        recipe_copy.allow_productivity = lasdata.productivity
 
         log("generating laser mill recipe: " .. recipe_copy.name)
 
@@ -311,13 +285,4 @@ end
 
 for name, helium in pairs(new_recipes_helium) do
   rm.AddIngredient(name, "helium", helium)
-end
-
---Get a reference to all prodmods to avoid doing these checks for each recipe
-for k, v in pairs(new_recipes_productivity) do
-  if data.raw.recipe[v] then
-    local cat = data.raw.recipe[v].allowed_module_categories or {}
-    table.insert(cat, "productivity")
-    data.raw.recipe[v].allowed_module_categories = cat
-  end
 end
