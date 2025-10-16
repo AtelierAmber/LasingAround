@@ -167,12 +167,12 @@ if mods["ThemTharHills-Updated"] and (data.raw.item["gyroscope"] or data.raw.ite
          {
            size = 64,
            filename = "__LasingAround-Updated__/graphics/icons/tracker.png",
-           scale = 0.25
+           scale = 0.5
          },
          {
            filename = "__LasingAround-Updated__/graphics/icons/tracker-glow.png",
            size = 64,
-           scale = 0.25,
+           scale = 0.5,
            draw_as_light = true
          }
        }
