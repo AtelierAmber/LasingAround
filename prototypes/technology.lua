@@ -19,7 +19,7 @@ data:extend({
         type = "unlock-recipe",
         recipe = "advanced-oil-filtration"
       },
-      mods["bzgas"] and {
+      parts.bz.gas and {
         type = "unlock-recipe",
         recipe = "advanced-gas-processing"
       }
@@ -191,7 +191,7 @@ data:extend({
         type = "unlock-recipe",
         recipe = "spectroscopic-oil-filtration"
       },
-      mods["bzgas"] and {
+      parts.bz.gas and {
         type = "unlock-recipe",
         recipe = "spectroscopic-gas-processing"
       } or nil
@@ -484,7 +484,7 @@ if not mods["Krastorio2"] then
   tf.addRecipeUnlock("helium-extraction", "helium-venting")
 end
 
-if mods["bzgas"] then
+if parts.bz.gas then
   if mods["space-exploration"] then
     tf.addRecipeUnlock("se-space-biochemical-laboratory", "advanced-methane-distillation")
     tf.addRecipeUnlock("spectroscopic-helium-extraction", "spectroscopic-methane-distillation")

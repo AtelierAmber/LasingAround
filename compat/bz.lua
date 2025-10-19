@@ -8,7 +8,7 @@ local function lasermill_recipe(recipe, lasdata)
   end
 end
 
-if mods["bzcarbon"] then
+if parts.bz.carbon then
   rm.RemoveIngredient("low-density-structure", "diamond", 99999)
   rm.RemoveProduct("low-density-structure", "diamond", 99999)
   tf.removePrereq("low-density-structure", "diamond-processing")
@@ -24,7 +24,7 @@ if mods["bzcarbon"] then
   end
 end
 
-if mods["bzgold"] then
+if parts.bz.gold then
   lasermill_recipe("silver-wire", {helium=1, type="gubbins", productivity=true, multiply=2})
   lasermill_recipe("mlcc", {helium=2, type="gubbins", unlock="advanced-capacitors", productivity=true})
   lasermill_recipe("temperature-sensor", {helium=2, type="gubbins", unlock="temperature-regulation", productivity=true})
@@ -36,25 +36,25 @@ if mods["bzgold"] then
   end
 end
 
-if mods["bzaluminum"] then
+if parts.bz.aluminum then
   lasermill_recipe("aluminum-cable", {helium=1, type="gubbins", productivity=true})
   lasermill_recipe("spark-plug", {helium=2, type="gubbins", productivity=true})
 end
 
-if mods["bztin"] then
+if parts.bz.tin then
   lasermill_recipe("tinned-cable", {helium=2, type="gubbins"})
 end
 
-if mods["bzsilicon"] then
+if parts.bz.silicon then
   tf.addPrereq("helium-laser", "fiber-optics")
   lasermill_recipe("optical-fiber", {helium=1, type="gubbins", productivity=true, multiply=4})
 end
 
-if mods["bzchlorine"] then
+if parts.bz.chlorine then
   lasermill_recipe("pcb", {helium=2, type="circuit", productivity=true, remove_fluids=true})
 end
 
-if mods["bzgas"] then
+if parts.bz.gas then
   data.raw.recipe["formaldehyde"].ingredients[1].fluidbox_index = 1
   data.raw.recipe["formaldehyde"].results[1].fluidbox_index = 1
 end

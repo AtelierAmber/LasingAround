@@ -21,7 +21,7 @@ if not rm.CheckIngredient("basic-oil-processing", "water") then
 end
 
 tf.addRecipeUnlock("laser", "empty-amplifier-tube")
-if mods["bzgold"] and not (mods["ThemTharHills-Updated"] or mods["space-exploration"]) then
+if parts.bz.gold and not (mods["ThemTharHills-Updated"] or mods["space-exploration"]) then
   tf.addPrereq("laser", "gold-processing")
 end
 
@@ -148,7 +148,7 @@ lasermill_recipe("iron-stick", {helium=1, productivity=true, type="gubbins", mul
 lasermill_recipe("copper-cable", {helium=1, productivity=true, type="gubbins", multiply=2})
 
 --it's easier this way.
-lasermill_recipe("electronic-circuit", {helium=mods["bztin"] and 2 or 1, productivity=true, type="circuit"})
+lasermill_recipe("electronic-circuit", {helium=parts.bz.tin and 2 or 1, productivity=true, type="circuit"})
 
 lasermill_recipe("advanced-circuit", {helium=rm.CheckIngredient("advanced-circuit", "silicon-wafer") and 15 or 5, productivity=true, type="circuit"})
 if not rm.CheckIngredient("processing-unit", "sulfuric-acid") then

@@ -15,7 +15,7 @@ if settings.startup["lasingaround-allow-gubbins-in-mill"].value then
   helium_yield = helium_yield + 2
 end
 if settings.startup["lasingaround-allow-circuits-in-mill"].value then
-  helium_yield = helium_yield + (mods["bzgold"] and 2 or 3)
+  helium_yield = helium_yield + (parts.bz.gold and 2 or 3)
 end
 if settings.startup["lasingaround-allow-gubbins-in-mill"].value then
   helium_yield = helium_yield + 1
@@ -100,7 +100,7 @@ data:extend({
     results = {{type="fluid", name="filtered-oil", amount=100, ignored_by_productivity=100, ignored_by_stats=100}, {type="fluid", name="helium", amount=helium_yield * 3}, {type="item", name="spectroscope", amount=1, probability=0.99, ignored_by_productivity=1, ignored_by_stats=1}, {type="fluid", name="crude-oil", amount=5, ignored_by_productivity=5, ignored_by_stats=5}},
     allow_decomposition = false
   },
-  (mods["bzgold"] and not (mods["space-exploration"] or mods["ThemTharHills-Updated"])) and {
+  (parts.bz.gold and not (mods["space-exploration"] or mods["ThemTharHills-Updated"])) and {
     type = "recipe",
     name = "empty-amplifier-tube",
     category = "advanced-crafting",
@@ -186,7 +186,7 @@ data:extend({
   }
 })
 
-if mods["bzgas"] then
+if parts.bz.gas then
   data:extend({
     {
       type = "recipe",
