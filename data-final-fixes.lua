@@ -129,7 +129,7 @@ if data.raw.item["micron-tolerance-components"] then
         end end end
         gyro_recipe.icons = {
           {
-            icon = "__bzsilicon__/graphics/icons/gyro.png",
+            icon = "__bzsilicon" .. (mods["bzsilicon2"] and "2" or "") .. "__/graphics/icons/gyro.png",
             icon_size = 128
           },
           {

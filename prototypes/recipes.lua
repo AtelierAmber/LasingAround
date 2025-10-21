@@ -248,7 +248,7 @@ if parts.bz.gas then
               icon_size = 64,
             },
             {
-              icon = "__bzgas__/graphics/icons/gas.png",
+              icon = "__bzgas" .. (mods["bzgas2"] and "2" or "") .. "__/graphics/icons/gas.png",
               icon_size = 128,
               scale=0.125,
               shift={-8, -8}
@@ -285,7 +285,7 @@ if parts.bz.gas then
               icon_size = 64,
             },
             {
-              icon = "__bzgas__/graphics/icons/gas.png",
+              icon = "__bzgas" .. (mods["bzgas2"] and "2" or "") .. "__/graphics/icons/gas.png",
               icon_size = 128,
               scale=0.125,
               shift={-8, -8}
@@ -328,7 +328,7 @@ if parts.bz.gas then
               icon_size = 64,
             },
             {
-              icon = "__bzgas__/graphics/icons/gas.png",
+              icon = "__bzgas" .. (mods["bzgas2"] and "2" or "") .. "__/graphics/icons/gas.png",
               icon_size = 128,
               scale=0.125,
               shift={-8, -8}
@@ -365,7 +365,7 @@ if parts.bz.gas then
               icon_size = 64,
             },
             {
-              icon = "__bzgas__/graphics/icons/gas.png",
+              icon = "__bzgas" .. (mods["bzgas2"] and "2" or "") .. "__/graphics/icons/gas.png",
               icon_size = 128,
               scale=0.125,
               shift={-8, -8}
