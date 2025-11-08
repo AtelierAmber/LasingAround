@@ -31,7 +31,7 @@ local lasermill = {
   },
   energy_usage = "850kW",
   module_slots = 4,
-  effect_receiver = { base_effect = { productivity = 0.1 } },
+  effect_receiver = { base_effect = { productivity = 0.2 } },
   allowed_effects = {"consumption", "speed", "productivity", "pollution"},
   fluid_boxes = {
     {
