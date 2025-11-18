@@ -106,7 +106,7 @@ data:extend({
     category = "advanced-crafting",
     enabled = false,
     energy_required = 50,
-    ingredients = tf.compilePrereqs{{type="item", name="gold-ingot", 1}, parts.preferred({"ll-silica", "bismuth-glass", mods["Krastorio2"] and "kr-glass" or "glass", "kr-quartz", "silica", "tin-plate", "iron-plate"}, {40, 20, 20, 10, 50, 20, 10}), 
+    ingredients = tf.compilePrereqs{{type="item", name="gold-ingot", amount=1}, parts.preferred({"ll-silica", "bismuth-glass", mods["Krastorio2"] and "kr-glass" or "glass", "kr-quartz", "silica", "tin-plate", "iron-plate"}, {40, 20, 20, 10, 50, 20, 10}), 
       parts.preferred({"silver-plate", "copper-plate"}, {10, 10}), parts.optionalIngredient("tungsten-plate", 10)},
     results = {{type="item", name="empty-amplifier-tube",amount=10}},
     lasermill = {
