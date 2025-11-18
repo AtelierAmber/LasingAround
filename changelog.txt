@@ -1,8 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.11
-Date: ????
+Date: 2025-11-17
   Changes:
-    - Changed lasermill productivity to 20% 
+    - Changed lasermill productivity to 20%
+  Bugfixes:
+    - Fixed crash when using bzgold and not SE or TTH
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.10
 Date: 2025-10-20
